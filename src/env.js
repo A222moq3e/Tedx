@@ -20,7 +20,7 @@ export const env = createEnv({
     // AUTH_DISCORD_ID: z.string(),
     // AUTH_DISCORD_SECRET: z.string(),
     DATABASE_URL: z.string().url(),
-    DATABASE_AUTH_TOKEN: z.string(),
+    DATABASE_AUTH_TOKEN: z.string().optional(),
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
