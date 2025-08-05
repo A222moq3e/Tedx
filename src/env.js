@@ -4,6 +4,7 @@ import { z } from "zod";
 console.log("🔍 ENV DEBUG:", {
   AUTH_SECRET: process.env.AUTH_SECRET,
   DATABASE_URL: process.env.DATABASE_URL,
+  DATABASE_AUTH_TOKEN: process.env.DATABASE_AUTH_TOKEN,
   NODE_ENV: process.env.NODE_ENV,
 });
 
