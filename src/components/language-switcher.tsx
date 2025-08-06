@@ -30,22 +30,14 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="secondary"
-          size="sm"
-          className="border-white/30 bg-white/20 text-white hover:bg-white/30"
-        >
+        <Button variant="secondary" size="sm">
           <Globe className="mr-2 h-4 w-4" />
           {localeNames[locale]}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-white">
+      <DropdownMenuContent align="end">
         {routing.locales.map((loc) => (
-          <DropdownMenuItem
-            key={loc}
-            onClick={() => switchLocale(loc)}
-            className={locale === loc ? "bg-accent font-medium" : ""}
-          >
+          <DropdownMenuItem key={loc} onClick={() => switchLocale(loc)}>
             {localeNames[loc]}
           </DropdownMenuItem>
         ))}

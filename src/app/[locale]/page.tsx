@@ -18,6 +18,8 @@ function HomePage() {
   return (
     <div className="mb-8 text-center">
       <h2 className="mb-2 text-3xl font-bold text-white">{t("welcome")}</h2>
+      <span className="font-sans">TedX</span>{" "}
+      <span className="font-arabic">تيد اكس</span>
       <p className="text-xl text-white/80">{t("subtitle")}</p>
     </div>
   );
