@@ -1,6 +1,6 @@
 import { relations, sql } from "drizzle-orm";
 import { index, primaryKey, sqliteTableCreator } from "drizzle-orm/sqlite-core";
-import { type AdapterAccount } from "next-auth/adapters";
+
 
 /**
  * This is an example of how to use the multi-project schema feature of Drizzle ORM. Use the same
@@ -11,7 +11,7 @@ import { type AdapterAccount } from "next-auth/adapters";
 export const createTable = sqliteTableCreator((name) => `tedx_${name}`);
 
 // Users table - updated with ERD design + NextAuth compatibility
-export const users = createTable("user", (d) => ({
+export const users = createTable("users", (d) => ({
   id: d
     .text({ length: 255 })
     .notNull()
@@ -31,7 +31,7 @@ export const users = createTable("user", (d) => ({
 
 // Events table
 export const events = createTable(
-  "event",
+  "events",
   (d) => ({
     id: d
       .text({ length: 255 })
@@ -56,7 +56,7 @@ export const events = createTable(
 
 // Registrations table
 export const registrations = createTable(
-  "registration",
+  "eventRegistrations",
   (d) => ({
     userId: d
       .text({ length: 255 })
@@ -82,7 +82,7 @@ export const registrations = createTable(
 
 // Speakers table
 export const speakers = createTable(
-  "speaker",
+  "speakers",
   (d) => ({
     id: d
       .text({ length: 255 })
@@ -103,7 +103,6 @@ export const speakers = createTable(
 
 // Relations
 export const usersRelations = relations(users, ({ many, one }) => ({
-  accounts: many(accounts),
   sessions: many(sessions),
   registrations: many(registrations),
   speakerProfile: one(speakers, { fields: [users.id], references: [speakers.userId] }),
@@ -128,61 +127,12 @@ export const speakersRelations = relations(speakers, ({ one }) => ({
   user: one(users, { fields: [speakers.userId], references: [users.id] }),
 }));
 
-// Legacy posts table (keeping for existing functionality)
-export const posts = createTable(
-  "post",
-  (d) => ({
-    id: d.integer({ mode: "number" }).primaryKey({ autoIncrement: true }),
-    name: d.text({ length: 256 }),
-    createdById: d
-      .text({ length: 255 })
-      .notNull()
-      .references(() => users.id),
-    createdAt: d
-      .integer({ mode: "timestamp" })
-      .default(sql`(unixepoch())`)
-      .notNull(),
-    updatedAt: d.integer({ mode: "timestamp" }).$onUpdate(() => new Date()),
-  }),
-  (t) => [
-    index("created_by_idx").on(t.createdById),
-    index("name_idx").on(t.name),
-  ]
-);
 
-// NextAuth required tables
-export const accounts = createTable(
-  "account",
-  (d) => ({
-    userId: d
-      .text({ length: 255 })
-      .notNull()
-      .references(() => users.id),
-    type: d.text({ length: 255 }).$type<AdapterAccount["type"]>().notNull(),
-    provider: d.text({ length: 255 }).notNull(),
-    providerAccountId: d.text({ length: 255 }).notNull(),
-    refresh_token: d.text(),
-    access_token: d.text(),
-    expires_at: d.integer(),
-    token_type: d.text({ length: 255 }),
-    scope: d.text({ length: 255 }),
-    id_token: d.text(),
-    session_state: d.text({ length: 255 }),
-  }),
-  (t) => [
-    primaryKey({
-      columns: [t.provider, t.providerAccountId],
-    }),
-    index("account_user_id_idx").on(t.userId),
-  ]
-);
 
-export const accountsRelations = relations(accounts, ({ one }) => ({
-  user: one(users, { fields: [accounts.userId], references: [users.id] }),
-}));
+// NextAuth required tables (keeping only sessions and verificationTokens)
 
 export const sessions = createTable(
-  "session",
+  "sessions",
   (d) => ({
     sessionToken: d.text({ length: 255 }).notNull().primaryKey(),
     userId: d
@@ -199,7 +149,7 @@ export const sessionsRelations = relations(sessions, ({ one }) => ({
 }));
 
 export const verificationTokens = createTable(
-  "verification_token",
+  "verificationTokens",
   (d) => ({
     identifier: d.text({ length: 255 }).notNull(),
     token: d.text({ length: 255 }).notNull(),
