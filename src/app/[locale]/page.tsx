@@ -7,6 +7,7 @@ import { LatestPost } from "~/app/_components/post";
 import { auth } from "~/server/auth";
 import { api, HydrateClient } from "~/trpc/server";
 import { LanguageSwitcher } from "~/components/language-switcher";
+import { ModeToggle } from "~/components/theme-toggle";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -17,10 +18,10 @@ function HomePage() {
 
   return (
     <div className="mb-8 text-center">
-      <h2 className="mb-2 text-3xl font-bold text-white">{t("welcome")}</h2>
+      <h2 className="mb-2 text-3xl font-bold text-foreground">{t("welcome")}</h2>
       <span className="font-sans">TedX</span>{" "}
       <span className="font-arabic">تيد اكس</span>
-      <p className="text-xl text-white/80">{t("subtitle")}</p>
+      <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
     </div>
   );
 }
@@ -38,8 +39,9 @@ export default async function Home({ params }: Props) {
 
   return (
     <HydrateClient>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-        <div className="absolute top-4 right-4">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-primary/80 to-background text-foreground">
+        <div className="absolute top-4 right-4 flex gap-2">
+          <ModeToggle />
           <LanguageSwitcher />
         </div>
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
@@ -50,7 +52,7 @@ export default async function Home({ params }: Props) {
           </h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
+              className="flex max-w-xs flex-col gap-4 rounded-xl bg-card p-4 hover:bg-accent"
               href="https://create.t3.gg/en/usage/first-steps"
               target="_blank"
             >
@@ -61,7 +63,7 @@ export default async function Home({ params }: Props) {
               </div>
             </Link>
             <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
+              className="flex max-w-xs flex-col gap-4 rounded-xl bg-card p-4 hover:bg-accent"
               href="https://create.t3.gg/en/introduction"
               target="_blank"
             >
@@ -73,17 +75,17 @@ export default async function Home({ params }: Props) {
             </Link>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <p className="text-2xl text-white">
+            <p className="text-2xl text-foreground">
               {hello ? hello.greeting : "Loading tRPC query..."}
             </p>
 
             <div className="flex flex-col items-center justify-center gap-4">
-              <p className="text-center text-2xl text-white">
+              <p className="text-center text-2xl text-foreground">
                 {session && <span>Logged in as {session.user?.name}</span>}
               </p>
               <Link
                 href={session ? "/api/auth/signout" : "/api/auth/signin"}
-                className="rounded-full bg-white/10 px-10 py-3 font-semibold no-underline transition hover:bg-white/20"
+                className="rounded-full bg-primary/20 px-10 py-3 font-semibold no-underline transition hover:bg-primary/30"
               >
                 {session ? "Sign out" : "Sign in"}
               </Link>

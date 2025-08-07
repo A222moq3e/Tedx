@@ -6,6 +6,7 @@ import { getMessages } from "next-intl/server";
 import { routing, type Locale } from "~/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { ibmPlexSansArabic } from "~/lib/fonts";
+import { ThemeProvider } from "~/components/theme-provider";
 
 import { TRPCReactProvider } from "~/trpc/react";
 
@@ -32,7 +33,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const isRTL = locale === "ar";
 
   return (
-    <html lang={locale} dir={isRTL ? "rtl" : "ltr"}>
+    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} suppressHydrationWarning>
       <body
         className={
           locale === "ar"
@@ -40,9 +41,16 @@ export default async function LocaleLayout({ children, params }: Props) {
             : "font-sans"
         }
       >
-        <NextIntlClientProvider messages={messages}>
-          <TRPCReactProvider>{children}</TRPCReactProvider>
-        </NextIntlClientProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages}>
+            <TRPCReactProvider>{children}</TRPCReactProvider>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

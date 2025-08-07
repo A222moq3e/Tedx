@@ -30,7 +30,7 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="secondary" size="sm">
+        <Button variant="outline" size="sm">
           <Globe className="mr-2 h-4 w-4" />
           {localeNames[locale]}
         </Button>
