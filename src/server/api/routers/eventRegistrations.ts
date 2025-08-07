@@ -146,4 +146,4 @@ export const eventRegistrationsRouter = createTRPCRouter({
         );
       return { success: true };
     }),
-}); 
+});

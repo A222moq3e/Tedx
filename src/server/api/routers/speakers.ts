@@ -134,4 +134,4 @@ export const speakersRouter = createTRPCRouter({
       await ctx.db.delete(speakers).where(eq(speakers.userId, input.userId));
       return { success: true };
     }),
-}); 
+});

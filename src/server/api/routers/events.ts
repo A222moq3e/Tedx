@@ -97,4 +97,4 @@ export const eventsRouter = createTRPCRouter({
       await ctx.db.delete(events).where(eq(events.id, input.id));
       return { success: true };
     }),
-}); 
+});

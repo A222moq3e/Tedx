@@ -68,4 +68,4 @@ export const usersRouter = createTRPCRouter({
       await ctx.db.delete(users).where(eq(users.id, input.id));
       return { success: true };
     }),
-}); 
+});
