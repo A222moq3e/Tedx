@@ -44,6 +44,7 @@
     "superjson": "^2.2.1",
     "tailwind-merge": "^3.3.1",
     "trpc-panel": "github:KROT47/trpc-panel",
+    "trpc-playground": "^1.0.4",
     "zod": "^3.24.2"
   },
   "devDependencies": {

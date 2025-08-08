@@ -1,15 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 
-export default function Navbar() {
+export default function Navigation() {
   return (
     <nav className="bg-white shadow-sm border-b border-gray-200">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-8">
-            <Link href="/" className="flex items-center">
-              <Image src="/avatar1.jpeg" alt="logo" width={40} height={40} className="rounded-full" />
-              <span className="ml-2 text-xl font-bold text-gray-900">TEDx Management</span>
+            <Link href="/" className="text-xl font-bold text-gray-900">
+              TEDx Management
             </Link>
             <div className="flex space-x-6">
               <Link
