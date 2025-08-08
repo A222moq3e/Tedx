@@ -30,15 +30,32 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="sm">
-          <Globe className="mr-2 h-4 w-4" />
-          {localeNames[locale]}
+        <Button 
+          variant="outline" 
+          size="sm"
+          className="h-9 px-3 border-gray-200 hover:border-red-300 hover:bg-red-50 hover:text-red-700 transition-all duration-200 shadow-sm"
+        >
+          <Globe className="mr-2 h-4 w-4 text-gray-500" />
+          <span className="font-medium">{localeNames[locale]}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent 
+        align="end" 
+        className="w-40 border-gray-200 shadow-lg"
+        sideOffset={8}
+      >
         {routing.locales.map((loc) => (
-          <DropdownMenuItem key={loc} onClick={() => switchLocale(loc)}>
-            {localeNames[loc]}
+          <DropdownMenuItem 
+            key={loc} 
+            onClick={() => switchLocale(loc)}
+            className={`cursor-pointer hover:bg-red-50 hover:text-red-700 transition-colors ${
+              locale === loc ? 'bg-red-100 text-red-700 font-medium' : ''
+            }`}
+          >
+            <div className="flex items-center justify-between w-full">
+              <span>{localeNames[loc]}</span>
+              {locale === loc && <span className="text-red-500">✓</span>}
+            </div>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

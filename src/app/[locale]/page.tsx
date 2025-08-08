@@ -1,100 +1,81 @@
 import { setRequestLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
 import { type Locale } from "~/i18n/routing";
-import Link from "next/link";
-
-import { LatestPost } from "~/app/_components/post";
-import { auth } from "~/server/auth";
-import { api, HydrateClient } from "~/trpc/server";
-import { LanguageSwitcher } from "~/components/language-switcher";
-import { ModeToggle } from "~/components/theme-toggle";
+import { Link } from "~/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
 };
 
-function HomePage() {
+function HomeContent() {
+  "use client";
   const t = useTranslations("HomePage");
-
   return (
-    <div className="mb-8 text-center">
-      <h2 className="mb-2 text-3xl font-bold text-foreground">{t("welcome")}</h2>
-      <span className="font-sans">TedX</span>{" "}
-      <span className="font-arabic">تيد اكس</span>
-      <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
-    </div>
+    <>
+      <div className="mb-8 text-center">
+        <h2 className="mb-2 text-3xl font-bold text-foreground">{t("welcome")}</h2>
+        <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
+      </div>
+      {/* Hero Section */}
+      <div className="text-center space-y-6">
+        <h1 className="text-6xl font-extrabold tracking-tight sm:text-[7rem]">
+          {t("heroTitle")}
+        </h1>
+        <p className="text-xl sm:text-2xl text-gray-300 max-w-2xl">
+          {t("subtitle")}
+        </p>
+      </div>
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Link
+          href="/#"
+          className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
+        >
+          Hello world!
+        </Link>
+      </div>
+      {/* Features Grid */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 md:gap-8 mt-12">
+        <div className="flex flex-col gap-4 rounded-xl bg-white/10 p-6 hover:bg-white/20 transition-colors">
+          <div className="text-4xl">🎤</div>
+          <h3 className="text-2xl font-bold">{t("speakersTitle")}</h3>
+          <p className="text-gray-300">
+            {t("speakersDescription")}
+          </p>
+        </div>
+        <div className="flex flex-col gap-4 rounded-xl bg-white/10 p-6 hover:bg-white/20 transition-colors">
+          <div className="text-4xl">🎪</div>
+          <h3 className="text-2xl font-bold">{t("eventsTitle")}</h3>
+          <p className="text-gray-300">
+            {t("eventsDescription")}
+          </p>
+        </div>
+        <div className="flex flex-col gap-4 rounded-xl bg-white/10 p-6 hover:bg-white/20 transition-colors">
+          <div className="text-4xl">🌟</div>
+          <h3 className="text-2xl font-bold">{t("communityTitle")}</h3>
+          <p className="text-gray-300">
+            {t("communityDescription")}
+          </p>
+        </div>
+      </div>
+      {/* Call to Action */}
+      <div className="text-center space-y-4 mt-12">
+        <h2 className="text-3xl font-bold">{t("readyTitle")}</h2>
+        <p className="text-gray-300">
+          {t("readyDescription")}
+        </p>
+      </div>
+    </>
   );
 }
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-
-  const hello = await api.post.hello({ text: "from tRPC" });
-  const session = await auth();
-
-  if (session?.user) {
-    void api.post.getLatest.prefetch();
-  }
-
   return (
-    <HydrateClient>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-primary/80 to-background text-foreground">
-        <div className="absolute top-4 right-4 flex gap-2">
-          <ModeToggle />
-          <LanguageSwitcher />
-        </div>
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-          <HomePage />
-
-          <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-            Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-          </h1>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-card p-4 hover:bg-accent"
-              href="https://create.t3.gg/en/usage/first-steps"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">First Steps →</h3>
-              <div className="text-lg">
-                Just the basics - Everything you need to know to set up your
-                database and authentication.
-              </div>
-            </Link>
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-card p-4 hover:bg-accent"
-              href="https://create.t3.gg/en/introduction"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">Documentation →</h3>
-              <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
-              </div>
-            </Link>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-2xl text-foreground">
-              {hello ? hello.greeting : "Loading tRPC query..."}
-            </p>
-
-            <div className="flex flex-col items-center justify-center gap-4">
-              <p className="text-center text-2xl text-foreground">
-                {session && <span>Logged in as {session.user?.name}</span>}
-              </p>
-              <Link
-                href={session ? "/api/auth/signout" : "/api/auth/signin"}
-                className="rounded-full bg-primary/20 px-10 py-3 font-semibold no-underline transition hover:bg-primary/30"
-              >
-                {session ? "Sign out" : "Sign in"}
-              </Link>
-            </div>
-          </div>
-
-          {session?.user && <LatestPost />}
-        </div>
-      </main>
-    </HydrateClient>
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-red-900 to-black text-white">
+      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
+        <HomeContent />
+      </div>
+    </main>
   );
 }
