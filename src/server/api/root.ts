@@ -3,6 +3,7 @@ import { usersRouter } from "~/server/api/routers/users";
 import { eventsRouter } from "~/server/api/routers/events";
 import { eventRegistrationsRouter } from "~/server/api/routers/eventRegistrations";
 import { speakersRouter } from "~/server/api/routers/speakers";
+import { healthRouter } from "~/server/api/routers/health";
 import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
 
 /**
@@ -15,6 +16,7 @@ export const appRouter = createTRPCRouter({
   events: eventsRouter,
   eventRegistrations: eventRegistrationsRouter,
   speakers: speakersRouter,
+  health: healthRouter,
 });
 
 // export type definition of API

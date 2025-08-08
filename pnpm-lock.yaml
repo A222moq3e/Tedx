@@ -62,6 +62,9 @@ importers:
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
+      trpc-panel:
+        specifier: github:KROT47/trpc-panel
+        version: https://codeload.github.com/KROT47/trpc-panel/tar.gz/b4ed9b98d07db3636bda3cd4e6d5386289155ab2
       zod:
         specifier: ^3.24.2
         version: 3.25.76
@@ -2538,6 +2541,10 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
+  trpc-panel@https://codeload.github.com/KROT47/trpc-panel/tar.gz/b4ed9b98d07db3636bda3cd4e6d5386289155ab2:
+    resolution: {tarball: https://codeload.github.com/KROT47/trpc-panel/tar.gz/b4ed9b98d07db3636bda3cd4e6d5386289155ab2}
+    version: 0.0.0
+
   ts-api-utils@2.1.0:
     resolution: {integrity: sha512-CUgTZL1irw8u29bzrOD/nH85jqyc74D6SshFgujOIA7osm2Rz7dYH77agkx7H4FBNxDq7Cjf+IjaX/8zwFW+ZQ==}
     engines: {node: '>=18.12'}
@@ -4967,6 +4974,8 @@ snapshots:
   to-regex-range@5.0.1:
     dependencies:
       is-number: 7.0.0
+
+  trpc-panel@https://codeload.github.com/KROT47/trpc-panel/tar.gz/b4ed9b98d07db3636bda3cd4e6d5386289155ab2: {}
 
   ts-api-utils@2.1.0(typescript@5.8.3):
     dependencies:
