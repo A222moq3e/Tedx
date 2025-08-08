@@ -4,7 +4,6 @@ import DiscordProvider from "next-auth/providers/discord";
 
 import { db } from "~/server/db";
 import {
-  accounts,
   sessions,
   users,
   verificationTokens,
@@ -51,7 +50,6 @@ export const authConfig = {
   ],
   adapter: DrizzleAdapter(db, {
     usersTable: users,
-    accountsTable: accounts,
     sessionsTable: sessions,
     verificationTokensTable: verificationTokens,
   }),
