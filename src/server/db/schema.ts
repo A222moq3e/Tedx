@@ -29,6 +29,33 @@ export const users = createTable("users", (d) => ({
   image: d.text({ length: 255 }),
 }));
 
+// Accounts table for NextAuth OAuth providers
+export const accounts = createTable(
+  "accounts",
+  (d) => ({
+    userId: d
+      .text({ length: 255 })
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    type: d.text({ length: 255 }).notNull(), // oauth, oidc, email, credentials
+    provider: d.text({ length: 255 }).notNull(), // discord, github, etc.
+    providerAccountId: d.text({ length: 255 }).notNull(),
+    refresh_token: d.text({ length: 255 }),
+    access_token: d.text({ length: 255 }),
+    expires_at: d.integer(),
+    token_type: d.text({ length: 255 }),
+    scope: d.text({ length: 255 }),
+    id_token: d.text({ length: 2048 }),
+    session_state: d.text({ length: 255 }),
+  }),
+  (t) => [
+    index("account_userId_idx").on(t.userId),
+    index("account_provider_idx").on(t.provider),
+    index("account_providerAccountId_idx").on(t.providerAccountId),
+    primaryKey({ columns: [t.provider, t.providerAccountId] }),
+  ]
+);
+
 // Events table
 export const events = createTable(
   "events",
@@ -103,10 +130,15 @@ export const speakers = createTable(
 
 // Relations
 export const usersRelations = relations(users, ({ many, one }) => ({
+  accounts: many(accounts),
   sessions: many(sessions),
   registrations: many(registrations),
   speakerProfile: one(speakers, { fields: [users.id], references: [speakers.userId] }),
   presentedEvents: many(events, { relationName: "presenter" }),
+}));
+
+export const accountsRelations = relations(accounts, ({ one }) => ({
+  user: one(users, { fields: [accounts.userId], references: [users.id] }),
 }));
 
 export const eventsRelations = relations(events, ({ many, one }) => ({
