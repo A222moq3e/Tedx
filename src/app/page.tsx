@@ -1,5 +1,8 @@
-import Link from "next/link";
+import {redirect} from 'next/navigation';
+import {routing} from '~/i18n/routing';
 
+export default function RootPage() {
+  redirect(`/${routing.defaultLocale}`);
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-red-900 to-black text-white">
