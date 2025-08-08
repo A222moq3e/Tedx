@@ -12,7 +12,7 @@ export const healthRouter = createTRPCRouter({
   }),
 
   // Detailed status with database check
-  status: publicProcedure.query(async ({ _ctx }) => {
+  status: publicProcedure.query(async () => {
     const startTime = Date.now();
     
     try {
