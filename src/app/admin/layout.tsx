@@ -10,6 +10,7 @@ export default function AdminLayout({
         {children}
       </main>
 
+
       {/* Admin Footer */}
       <footer className="bg-white border-t border-gray-200 mt-12">
         <div className="container mx-auto px-6 py-4">
