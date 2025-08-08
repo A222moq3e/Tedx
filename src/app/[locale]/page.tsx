@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "~/i18n/routing";
 import { Link } from "~/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -8,7 +9,6 @@ type Props = {
 
 function HomeContent() {
   "use client";
-  const { useTranslations } = require("next-intl");
   const t = useTranslations("HomePage");
   return (
     <>
