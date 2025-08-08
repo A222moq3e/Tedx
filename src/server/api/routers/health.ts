@@ -1,6 +1,4 @@
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
-import { db } from "~/server/db";
-import { sql } from "drizzle-orm";
 
 export const healthRouter = createTRPCRouter({
   // Basic health check
@@ -14,7 +12,7 @@ export const healthRouter = createTRPCRouter({
   }),
 
   // Detailed status with database check
-  status: publicProcedure.query(async ({ ctx }) => {
+  status: publicProcedure.query(async ({ _ctx }) => {
     const startTime = Date.now();
     
     try {

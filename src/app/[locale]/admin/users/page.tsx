@@ -29,21 +29,21 @@ export default function UsersPage() {
   const { data: users, refetch, isLoading } = api.users.getAll.useQuery();
   const createUser = api.users.create.useMutation({
     onSuccess: () => {
-      refetch();
+      void refetch();
       setShowCreateForm(false);
       setFormData({ name: "", email: "", type: "visitor", position: "", specialization: "" });
     },
   });
   const updateUser = api.users.update.useMutation({
     onSuccess: () => {
-      refetch();
+      void refetch();
       setIsEditing(false);
       setSelectedUser(null);
     },
   });
   const deleteUser = api.users.delete.useMutation({
     onSuccess: () => {
-      refetch();
+      void refetch();
       setSelectedUser(null);
     },
   });
@@ -74,9 +74,9 @@ export default function UsersPage() {
   const startEditing = (user: User) => {
     setSelectedUser(user);
     setFormData({
-      name: user.name || "",
+      name: user.name ?? "",
       email: user.email,
-      type: user.type || "visitor",
+      type: user.type ?? "visitor",
       position: "",
       specialization: "",
     });
@@ -109,7 +109,7 @@ export default function UsersPage() {
           <div className="p-4 border-b border-gray-200">
             <h2 className="text-xl font-semibold text-gray-800">All Users</h2>
             <p className="text-sm text-gray-600">
-              {users?.length || 0} users total
+              {users?.length ?? 0} users total
             </p>
           </div>
           <div className="p-4 max-h-96 overflow-y-auto">
@@ -130,7 +130,7 @@ export default function UsersPage() {
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
                     <h3 className="font-medium text-gray-900">
-                      {user.name || "No Name"}
+                      {user.name ?? "No Name"}
                     </h3>
                     <p className="text-sm text-gray-600">{user.email}</p>
                     <div className="flex gap-2 mt-1">
@@ -141,7 +141,7 @@ export default function UsersPage() {
                         ? "bg-blue-100 text-blue-700" 
                         : "bg-gray-100 text-gray-700"
                     }`}>
-                        {user.type || "visitor"}
+                        {user.type ?? "visitor"}
                     </span>
                     </div>
                   </div>
@@ -242,7 +242,7 @@ export default function UsersPage() {
                       </label>
                       <input
                         type="text"
-                        value={formData.position || ""}
+                        value={formData.position ?? ""}
                         onChange={(e) =>
                           setFormData({ ...formData, position: e.target.value })
                         }
@@ -256,7 +256,7 @@ export default function UsersPage() {
                       </label>
                       <input
                         type="text"
-                        value={formData.specialization || ""}
+                        value={formData.specialization ?? ""}
                         onChange={(e) =>
                           setFormData({ ...formData, specialization: e.target.value })
                         }
@@ -349,7 +349,7 @@ export default function UsersPage() {
                       </label>
                       <input
                         type="text"
-                        value={formData.position || ""}
+                        value={formData.position ?? ""}
                         onChange={(e) =>
                           setFormData({ ...formData, position: e.target.value })
                         }
@@ -363,7 +363,7 @@ export default function UsersPage() {
                       </label>
                       <input
                         type="text"
-                        value={formData.specialization || ""}
+                        value={formData.specialization ?? ""}
                         onChange={(e) =>
                           setFormData({ ...formData, specialization: e.target.value })
                         }
@@ -406,7 +406,7 @@ export default function UsersPage() {
                   <label className="block text-sm font-medium text-gray-700">
                     Name
                   </label>
-                  <p className="text-gray-900">{selectedUser.name || "No Name"}</p>
+                  <p className="text-gray-900">{selectedUser.name ?? "No Name"}</p>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700">
@@ -418,7 +418,7 @@ export default function UsersPage() {
                   <label className="block text-sm font-medium text-gray-700">
                     Type
                   </label>
-                  <p className="text-gray-900">{selectedUser.type || "visitor"}</p>
+                  <p className="text-gray-900">{selectedUser.type ?? "visitor"}</p>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700">

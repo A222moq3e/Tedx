@@ -31,14 +31,14 @@ export default function EventsPage() {
   const { data: users } = api.users.getAll.useQuery(); // For presenter dropdown
   const createEvent = api.events.create.useMutation({
     onSuccess: () => {
-      refetch();
+      void refetch();
       setShowCreateForm(false);
       setFormData({ name: "", description: "", type: "Talk", date: "", capacity: 50, presenterId: "" });
     },
   });
   const updateEvent = api.events.update.useMutation({
     onSuccess: () => {
-      refetch();
+      void refetch();
       setIsEditing(false);
       setSelectedEvent(null);
       setFormData({ name: "", description: "", type: "Talk", date: "", capacity: 50, presenterId: "" });
@@ -46,7 +46,7 @@ export default function EventsPage() {
   });
   const deleteEvent = api.events.delete.useMutation({
     onSuccess: () => {
-      refetch();
+      void refetch();
     },
   });
 
@@ -87,11 +87,11 @@ export default function EventsPage() {
     setSelectedEvent(event);
     setFormData({
       name: event.name,
-      description: event.description || "",
+      description: event.description ?? "",
       type: event.type,
       date: event.date.toISOString().slice(0, 16), // Format for datetime-local input
       capacity: event.capacity,
-      presenterId: event.presenterId || "",
+      presenterId: event.presenterId ?? "",
     });
     setIsEditing(true);
     setShowCreateForm(false);
@@ -112,13 +112,13 @@ export default function EventsPage() {
       "Workshop": "bg-yellow-100 text-yellow-800",
       "Panel": "bg-red-100 text-red-800",
     };
-    return colors[type as keyof typeof colors] || "bg-gray-100 text-gray-800";
+    return colors[type as keyof typeof colors] ?? "bg-gray-100 text-gray-800";
   };
 
   const getPresenterName = (presenterId: string | null) => {
     if (!presenterId) return "No Presenter";
     const presenter = users?.find(user => user.id === presenterId);
-    return presenter ? presenter.name : "Unknown";
+    return presenter?.name ?? "Unknown";
   };
 
   return (
@@ -138,7 +138,7 @@ export default function EventsPage() {
         <div className="bg-white rounded-lg shadow-md">
           <div className="p-4 border-b border-gray-200">
             <h2 className="text-xl font-semibold text-gray-800">
-              Events ({events?.length || 0})
+              Events ({events?.length ?? 0})
             </h2>
           </div>
           <div className="max-h-96 overflow-y-auto">
@@ -155,7 +155,7 @@ export default function EventsPage() {
                       <div className="flex-1">
                         <h3 className="font-semibold text-gray-800">{event.name}</h3>
                         <p className="text-sm text-gray-600 mt-1">
-                          {event.description || "No description"}
+                          {event.description ?? "No description"}
                         </p>
                         <div className="flex items-center gap-2 mt-2">
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${getEventTypeBadge(event.type)}`}>

@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing, type Locale } from "~/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
-import { ibmPlexSansArabic } from "~/lib/fonts";
+
 import { ThemeProvider } from "~/components/theme-provider";
 
 import { TRPCReactProvider } from "~/trpc/react";
@@ -31,7 +31,6 @@ export default async function LocaleLayout({ children, params }: Props) {
   setRequestLocale(locale);
 
   const messages = await getMessages();
-  const isRTL = locale === "ar";
 
   return (
     <ThemeProvider

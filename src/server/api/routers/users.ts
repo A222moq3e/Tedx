@@ -36,8 +36,8 @@ export const usersRouter = createTRPCRouter({
           .insert(speakers)
           .values({
             userId: user.id,
-              position: input.position || null,
-              specialization: input.specialization || null,
+                           position: input.position ?? null,
+             specialization: input.specialization ?? null,
             });
         }
         
@@ -115,8 +115,8 @@ export const usersRouter = createTRPCRouter({
           await ctx.db
             .update(speakers)
             .set({
-              position: position || existingSpeaker.position,
-              specialization: specialization || existingSpeaker.specialization,
+                             position: position ?? existingSpeaker.position,
+               specialization: specialization ?? existingSpeaker.specialization,
             })
             .where(eq(speakers.userId, id));
         } else {
@@ -125,8 +125,8 @@ export const usersRouter = createTRPCRouter({
             .insert(speakers)
             .values({
               userId: id,
-              position: position || null,
-              specialization: specialization || null,
+                             position: position ?? null,
+               specialization: specialization ?? null,
             });
         }
       } else if (currentUser.type === "speaker" && updatedUser.type !== "speaker") {
