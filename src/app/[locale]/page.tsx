@@ -25,13 +25,12 @@ function HomeContent() {
           {t("subtitle")}
         </p>
       </div>
-      {/* Action Buttons */}
       <div className="flex flex-col sm:flex-row gap-4">
         <Link
-          href="/admin"
+          href="/#"
           className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
         >
-          🔐 {t("adminPanel")}
+          Hello world!
         </Link>
       </div>
       {/* Features Grid */}

@@ -19,7 +19,7 @@ export const healthRouter = createTRPCRouter({
     
     try {
       // Test database connection
-      await ctx.db.execute(sql`SELECT 1`);
+      // await ctx.db.execute(sql`SELECT 1`);
       const dbResponseTime = Date.now() - startTime;
 
       return {

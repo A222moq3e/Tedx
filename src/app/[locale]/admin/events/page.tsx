@@ -2,16 +2,7 @@
 
 import { useState } from "react";
 import { api } from "~/trpc/react";
-
-type Event = {
-  id: string;
-  name: string;
-  description: string | null;
-  type: string;
-  date: Date;
-  capacity: number;
-  presenterId: string | null;
-};
+import type { Event } from "~/types/event";
 
 type EventFormData = {
   name: string;
