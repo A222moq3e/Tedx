@@ -87,12 +87,20 @@ export const usersRouter = createTRPCRouter({
         .from(users)
         .where(eq(users.id, id));
 
+      if (!currentUser) {
+        throw new Error("User not found");
+      }
+
       // Update user
       const [updatedUser] = await ctx.db
         .update(users)
         .set(updateData)
         .where(eq(users.id, id))
         .returning();
+
+      if (!updatedUser) {
+        throw new Error("User not found");
+      }
 
       // Handle speaker profile changes
       if (updatedUser.type === "speaker") {
@@ -121,7 +129,7 @@ export const usersRouter = createTRPCRouter({
               specialization: specialization || null,
             });
         }
-      } else if (currentUser?.type === "speaker" && updatedUser.type !== "speaker") {
+      } else if (currentUser.type === "speaker" && updatedUser.type !== "speaker") {
         // User was a speaker but no longer is - remove speaker profile
         await ctx.db
           .delete(speakers)

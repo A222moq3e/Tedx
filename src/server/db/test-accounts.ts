@@ -1,5 +1,6 @@
 import { db } from "./index";
 import { accounts, users } from "./schema";
+import { eq } from "drizzle-orm";
 
 // Test function to verify accounts table integration
 export async function testAccountsTable() {
@@ -24,7 +25,7 @@ export async function testAccountsTable() {
         accountType: accounts.type,
       })
       .from(users)
-      .leftJoin(accounts, (eq) => eq(users.id, accounts.userId));
+      .leftJoin(accounts, eq(users.id, accounts.userId));
     
     console.log("✅ Users-Accounts relationship is working");
     console.log(`Found ${usersWithAccounts.length} user-account relationships`);
