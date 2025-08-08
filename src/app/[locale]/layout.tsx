@@ -34,26 +34,16 @@ export default async function LocaleLayout({ children, params }: Props) {
   const isRTL = locale === "ar";
 
   return (
-    <html lang={locale} dir={isRTL ? "rtl" : "ltr"} suppressHydrationWarning>
-      <body
-        className={
-          locale === "ar"
-            ? `${ibmPlexSansArabic.variable} font-arabic`
-            : "font-sans"
-        }
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider messages={messages}>
-            <Navigation />
-            <TRPCReactProvider>{children}</TRPCReactProvider>
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <NextIntlClientProvider messages={messages}>
+        <Navigation />
+        <TRPCReactProvider>{children}</TRPCReactProvider>
+      </NextIntlClientProvider>
+    </ThemeProvider>
   );
 }

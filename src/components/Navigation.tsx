@@ -2,12 +2,14 @@
 
 import { Link } from "~/i18n/navigation";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "./language-switcher";
 import { ModeToggle } from "./theme-toggle";
 
 export default function Navigation() {
   const pathname = usePathname();
   const isAdminPage = pathname?.includes("/admin");
+  const t = useTranslations("Navigation");
 
   return (
     <nav className="bg-white shadow-sm border-b border-gray-200">
@@ -17,7 +19,7 @@ export default function Navigation() {
             <Link href="/" className="flex items-center">
               <span className="text-xl font-bold text-red-600">TEDx</span>
               <span className="ml-2 text-xl font-bold text-gray-900">
-                {isAdminPage ? "Admin Panel" : "Management"}
+                {isAdminPage ? t("adminBrandSuffix") : ''}
               </span>
             </Link>
             <div className="flex space-x-6">
@@ -32,7 +34,7 @@ export default function Navigation() {
                         : "text-gray-700 hover:text-red-600"
                     }`}
                   >
-                    👥 Users
+                    👥 {t("users")}
                   </Link>
                   <Link
                     href="/admin/events"
@@ -42,7 +44,7 @@ export default function Navigation() {
                         : "text-gray-700 hover:text-red-600"
                     }`}
                   >
-                    🎪 Events
+                    🎪 {t("events")}
                   </Link>
                 </>
               ) : (
@@ -52,7 +54,7 @@ export default function Navigation() {
                     href="/admin"
                     className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
                   >
-                    🔐 Admin
+                    🔐 {t("admin")}
                   </Link>
                 </>
               )}
@@ -66,13 +68,13 @@ export default function Navigation() {
                   className="text-green-600 hover:text-green-700 text-sm font-medium px-2 py-1 rounded-md hover:bg-green-50 transition-colors"
                   target="_blank"
                 >
-                  📊 API Status
+                  📊 {t("apiStatus")}
                 </Link>
                 <Link
                   href="/"
                   className="text-gray-600 hover:text-gray-800 text-sm font-medium px-2 py-1 rounded-md hover:bg-gray-50 transition-colors"
                 >
-                  ← Back to Home
+                  ← {t("backToHome")}
                 </Link>
               </>
             )}

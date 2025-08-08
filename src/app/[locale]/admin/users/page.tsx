@@ -35,7 +35,7 @@ export default function UsersPage() {
   });
 
   // tRPC queries and mutations
-  const { data: users, refetch } = api.users.getAll.useQuery();
+  const { data: users, refetch, isLoading } = api.users.getAll.useQuery();
   const createUser = api.users.create.useMutation({
     onSuccess: () => {
       refetch();
@@ -122,7 +122,11 @@ export default function UsersPage() {
             </p>
           </div>
           <div className="p-4 max-h-96 overflow-y-auto">
-            {users?.map((user) => (
+            {isLoading ? (
+              <div className="text-center py-8 text-gray-500">Loading users...</div>
+            ) : (
+              <>
+                {users?.map((user) => (
               <div
                 key={user.id}
                 className={`p-3 border rounded-lg mb-3 cursor-pointer transition-colors ${
@@ -173,10 +177,12 @@ export default function UsersPage() {
                 </div>
               </div>
             ))}
-            {users?.length === 0 && (
-              <div className="text-center py-8 text-gray-500">
-                No users found. Create your first user!
-              </div>
+                {users?.length === 0 && (
+                  <div className="text-center py-8 text-gray-500">
+                    No users found. Create your first user!
+                  </div>
+                )}
+              </>
             )}
           </div>
         </div>

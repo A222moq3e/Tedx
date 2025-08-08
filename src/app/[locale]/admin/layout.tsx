@@ -1,8 +1,13 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const t = useTranslations("AdminLayout");
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Admin Content with some padding */}
@@ -15,10 +20,10 @@ export default function AdminLayout({
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center text-sm text-gray-600">
             <div>
-              <span className="font-medium text-red-600">TEDx Admin Panel</span> - Manage your event
+              {t("footerText")}
             </div>
             <div className="flex space-x-4">
-              <span>Admin Dashboard</span>
+              <span>{t("adminDashboard")}</span>
             </div>
           </div>
         </div>

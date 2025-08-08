@@ -1,15 +1,19 @@
+"use client";
+
 import { Link } from "~/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function AdminDashboard() {
+  const t = useTranslations("AdminDashboard");
   return (
     <div className="container mx-auto p-6 max-w-4xl">
       {/* Admin Dashboard Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-2">
-          <span className="text-red-600">TEDx</span> Admin Dashboard
+          <span className="text-red-600">TEDx</span> {t("title")}
         </h1>
         <p className="text-lg text-gray-600">
-          Manage your TEDx event with powerful admin tools
+          {t("subtitle")}
         </p>
       </div>
 
@@ -19,8 +23,8 @@ export default function AdminDashboard() {
           <div className="flex items-center">
             <div className="text-3xl mr-4">👥</div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-800">Users</h3>
-              <p className="text-sm text-gray-600">Manage all users</p>
+              <h3 className="text-lg font-semibold text-gray-800">{t("usersTitle")}</h3>
+              <p className="text-sm text-gray-600">{t("usersDescription")}</p>
             </div>
           </div>
         </div>
@@ -28,8 +32,8 @@ export default function AdminDashboard() {
           <div className="flex items-center">
             <div className="text-3xl mr-4">🎪</div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-800">Events</h3>
-              <p className="text-sm text-gray-600">Organize your events</p>
+              <h3 className="text-lg font-semibold text-gray-800">{t("eventsTitle")}</h3>
+              <p className="text-sm text-gray-600">{t("eventsDescription")}</p>
             </div>
           </div>
         </div>
@@ -41,20 +45,20 @@ export default function AdminDashboard() {
         <div className="bg-white rounded-lg shadow-md p-6">
           <div className="flex items-center mb-4">
             <div className="text-2xl mr-3">👥</div>
-            <h2 className="text-xl font-semibold text-gray-800">User Management</h2>
+            <h2 className="text-xl font-semibold text-gray-800">{t("userManagementTitle")}</h2>
           </div>
           <p className="text-gray-600 mb-4">
-            Create, edit, and manage users. Handle speaker profiles and user types.
+            {t("userManagementDescription")}
           </p>
           <div className="space-y-2">
             <Link
               href="/admin/users"
               className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-md font-medium transition-colors"
             >
-              Manage Users
+              {t("manageUsers")}
             </Link>
             <div className="text-sm text-gray-500">
-              • Create new users • Edit user details • Manage speaker profiles
+              {t("userManagementFeatures")}
             </div>
           </div>
         </div>
@@ -63,20 +67,20 @@ export default function AdminDashboard() {
         <div className="bg-white rounded-lg shadow-md p-6">
           <div className="flex items-center mb-4">
             <div className="text-2xl mr-3">🎪</div>
-            <h2 className="text-xl font-semibold text-gray-800">Event Management</h2>
+            <h2 className="text-xl font-semibold text-gray-800">{t("eventManagementTitle")}</h2>
           </div>
           <p className="text-gray-600 mb-4">
-            Create and organize events, set capacity, assign presenters, and manage schedules.
+            {t("eventManagementDescription")}
           </p>
           <div className="space-y-2">
             <Link
               href="/admin/events"
               className="block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-2 px-4 rounded-md font-medium transition-colors"
             >
-              Manage Events
+              {t("manageEvents")}
             </Link>
             <div className="text-sm text-gray-500">
-              • Schedule events • Set capacity • Assign presenters
+              {t("eventManagementFeatures")}
             </div>
           </div>
         </div>
@@ -85,10 +89,10 @@ export default function AdminDashboard() {
         <div className="bg-white rounded-lg shadow-md p-6">
           <div className="flex items-center mb-4">
             <div className="text-2xl mr-3">📊</div>
-            <h2 className="text-xl font-semibold text-gray-800">System Monitoring</h2>
+            <h2 className="text-xl font-semibold text-gray-800">{t("systemMonitoringTitle")}</h2>
           </div>
           <p className="text-gray-600 mb-4">
-            Monitor system health and API status for optimal performance.
+            {t("systemMonitoringDescription")}
           </p>
           <div className="space-y-2">
             <Link
@@ -96,10 +100,10 @@ export default function AdminDashboard() {
               target="_blank"
               className="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-2 px-4 rounded-md font-medium transition-colors"
             >
-              API Health Check
+              {t("apiHealthCheck")}
             </Link>
             <div className="text-sm text-gray-500">
-              • System status • Database connectivity • API performance
+              {t("systemMonitoringFeatures")}
             </div>
           </div>
         </div>
@@ -108,17 +112,17 @@ export default function AdminDashboard() {
         <div className="bg-white rounded-lg shadow-md p-6">
           <div className="flex items-center mb-4">
             <div className="text-2xl mr-3">🗄️</div>
-            <h2 className="text-xl font-semibold text-gray-800">Database Management</h2>
+            <h2 className="text-xl font-semibold text-gray-800">{t("databaseManagementTitle")}</h2>
           </div>
           <p className="text-gray-600 mb-4">
-            Manage database operations and view system information.
+            {t("databaseManagementDescription")}
           </p>
           <div className="space-y-2">
             <div className="bg-gray-100 text-gray-700 text-center py-2 px-4 rounded-md font-medium">
-              Database Connected
+              {t("databaseConnected")}
             </div>
             <div className="text-sm text-gray-500">
-              • Database health • Connection status • Data integrity
+              {t("databaseManagementFeatures")}
             </div>
           </div>
         </div>
@@ -127,13 +131,13 @@ export default function AdminDashboard() {
       {/* Quick Access Footer */}
       <div className="mt-8 p-6 bg-gray-100 rounded-lg">
         <div className="text-center">
-          <h3 className="text-lg font-semibold text-gray-800 mb-2">Quick Access</h3>
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">{t("quickAccessTitle")}</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/"
               className="text-red-600 hover:text-red-700 font-medium"
             >
-              🏠 Back to Home
+              {t("backToHome")}
             </Link>
           </div>
         </div>

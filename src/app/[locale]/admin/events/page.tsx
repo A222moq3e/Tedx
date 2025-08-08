@@ -36,7 +36,7 @@ export default function EventsPage() {
   });
 
   // tRPC queries and mutations
-  const { data: events, refetch } = api.events.getAll.useQuery();
+  const { data: events, refetch, isLoading } = api.events.getAll.useQuery();
   const { data: users } = api.users.getAll.useQuery(); // For presenter dropdown
   const createEvent = api.events.create.useMutation({
     onSuccess: () => {
@@ -151,53 +151,59 @@ export default function EventsPage() {
             </h2>
           </div>
           <div className="max-h-96 overflow-y-auto">
-            {events?.map((event) => (
-              <div
-                key={event.id}
-                className="p-4 border-b border-gray-100 hover:bg-gray-50 transition-colors"
-              >
-                <div className="flex justify-between items-start mb-2">
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-gray-800">{event.name}</h3>
-                    <p className="text-sm text-gray-600 mt-1">
-                      {event.description || "No description"}
-                    </p>
-                    <div className="flex items-center gap-2 mt-2">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getEventTypeBadge(event.type)}`}>
-                        {event.type}
-                      </span>
-                      <span className="text-xs text-gray-500">
-                        Capacity: {event.capacity}
-                      </span>
-                    </div>
-                    <div className="text-xs text-gray-500 mt-1">
-                      <div>📅 {event.date.toLocaleDateString()} at {event.date.toLocaleTimeString()}</div>
-                      <div>👤 {getPresenterName(event.presenterId)}</div>
+            {isLoading ? (
+              <div className="text-center py-8 text-gray-500">Loading events...</div>
+            ) : (
+              <>
+                {events?.map((event) => (
+                  <div
+                    key={event.id}
+                    className="p-4 border-b border-gray-100 hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="flex justify-between items-start mb-2">
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-800">{event.name}</h3>
+                        <p className="text-sm text-gray-600 mt-1">
+                          {event.description || "No description"}
+                        </p>
+                        <div className="flex items-center gap-2 mt-2">
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getEventTypeBadge(event.type)}`}>
+                            {event.type}
+                          </span>
+                          <span className="text-xs text-gray-500">
+                            Capacity: {event.capacity}
+                          </span>
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          <div>📅 {event.date.toLocaleDateString()} at {event.date.toLocaleTimeString()}</div>
+                          <div>👤 {getPresenterName(event.presenterId)}</div>
+                        </div>
+                      </div>
+                      <div className="flex gap-2 ml-4">
+                        <button
+                          onClick={() => startEditing(event)}
+                          className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          onClick={() => handleDeleteEvent(event.id)}
+                          className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex gap-2 ml-4">
-                    <button
-                      onClick={() => startEditing(event)}
-                      className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={() => handleDeleteEvent(event.id)}
-                      className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm font-medium transition-colors"
-                    >
-                      Delete
-                    </button>
+                ))}
+                {(!events || events.length === 0) && (
+                  <div className="p-8 text-center text-gray-500">
+                    <div className="text-4xl mb-2">📅</div>
+                    <p>No events found</p>
+                    <p className="text-sm">Create your first event to get started!</p>
                   </div>
-                </div>
-              </div>
-            ))}
-            {(!events || events.length === 0) && (
-              <div className="p-8 text-center text-gray-500">
-                <div className="text-4xl mb-2">📅</div>
-                <p>No events found</p>
-                <p className="text-sm">Create your first event to get started!</p>
-              </div>
+                )}
+              </>
             )}
           </div>
         </div>
