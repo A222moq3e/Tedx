@@ -94,8 +94,8 @@ export const usersRouter = createTRPCRouter({
         .where(eq(users.id, id))
         .returning();
 
-  // Handle speaker profile changes
-  if (updatedUser && updatedUser.type === "speaker") {
+      // Handle speaker profile changes
+      if (updatedUser.type === "speaker") {
         // Check if speaker profile exists
         const [existingSpeaker] = await ctx.db
           .select()
@@ -121,7 +121,7 @@ export const usersRouter = createTRPCRouter({
               specialization: specialization || null,
             });
         }
-  } else if (currentUser?.type === "speaker" && updatedUser && updatedUser.type !== "speaker") {
+      } else if (currentUser?.type === "speaker" && updatedUser.type !== "speaker") {
         // User was a speaker but no longer is - remove speaker profile
         await ctx.db
           .delete(speakers)
