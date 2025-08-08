@@ -4,7 +4,7 @@ import tseslint from 'typescript-eslint';
 import drizzle from "eslint-plugin-drizzle";
 
 const compat = new FlatCompat({
-  baseDirectory: import//.meta.dirname,
+  baseDirectory: import.meta.dirname,
 });
 
 export default tseslint.config(

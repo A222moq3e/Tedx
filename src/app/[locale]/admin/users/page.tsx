@@ -139,7 +139,7 @@ export default function UsersPage() {
                     </h3>
                     <p className="text-sm text-gray-600">{user.email}</p>
                     <div className="flex gap-2 mt-1">
-                                          <span className={`text-xs px-2 py-1 rounded ${
+                                      <span className={`text-xs px-2 py-1 rounded ${
                       user.type === "admin" 
                         ? "bg-red-100 text-red-700" 
                         : user.type === "speaker" 

@@ -1,11 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "~/i18n/navigation";
 import { usePathname } from "next/navigation";
+import { LanguageSwitcher } from "./language-switcher";
+import { ModeToggle } from "./theme-toggle";
 
 export default function Navigation() {
   const pathname = usePathname();
-  const isAdminPage = pathname?.startsWith("/admin");
+  const isAdminPage = pathname?.includes("/admin");
 
   return (
     <nav className="bg-white shadow-sm border-b border-gray-200">
@@ -25,7 +27,7 @@ export default function Navigation() {
                   <Link
                     href="/admin/users"
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      pathname === "/admin/users"
+                      pathname?.includes("/admin/users")
                         ? "bg-red-100 text-red-700"
                         : "text-gray-700 hover:text-red-600"
                     }`}
@@ -35,7 +37,7 @@ export default function Navigation() {
                   <Link
                     href="/admin/events"
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      pathname === "/admin/events"
+                      pathname?.includes("/admin/events")
                         ? "bg-red-100 text-red-700"
                         : "text-gray-700 hover:text-red-600"
                     }`}
@@ -56,24 +58,28 @@ export default function Navigation() {
               )}
             </div>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             {isAdminPage && (
               <>
                 <Link
                   href="/api/trpc/health.check"
-                  className="text-green-600 hover:text-green-700 text-sm"
+                  className="text-green-600 hover:text-green-700 text-sm font-medium px-2 py-1 rounded-md hover:bg-green-50 transition-colors"
                   target="_blank"
                 >
                   📊 API Status
                 </Link>
                 <Link
                   href="/"
-                  className="text-gray-600 hover:text-gray-800 text-sm font-medium"
+                  className="text-gray-600 hover:text-gray-800 text-sm font-medium px-2 py-1 rounded-md hover:bg-gray-50 transition-colors"
                 >
                   ← Back to Home
                 </Link>
               </>
             )}
+            <div className="flex items-center space-x-2">
+              <ModeToggle />
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>
