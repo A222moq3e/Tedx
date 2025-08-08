@@ -31,15 +31,19 @@ export const usersRouter = createTRPCRouter({
 
       // If user is a speaker, create speaker profile
       if (input.type === "speaker") {
+        if (user) {
         await ctx.db
           .insert(speakers)
           .values({
             userId: user.id,
-            position: input.position || null,
-            specialization: input.specialization || null,
-          });
+              position: input.position || null,
+              specialization: input.specialization || null,
+            });
+        }
         
-        console.log("Created speaker profile for user:", user.id);
+        console.log("Created speaker profile for user:", user?.id);
+      } else {
+        console.log("User is not a speaker");
       }
 
       return user;

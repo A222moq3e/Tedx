@@ -18,16 +18,16 @@ export default function Home() {
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
-            href="/users"
+            href="/admin/users"
             className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
           >
             Manage Users
           </Link>
           <Link
-            href="/events"
+            href="/admin/events"
             className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
           >
-            View Events
+            Manage Events
           </Link>
         </div>
 
