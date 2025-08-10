@@ -8,8 +8,8 @@ import { setRequestLocale } from "next-intl/server";
 
 import { ThemeProvider } from "~/components/theme-provider";
 
-import { TRPCReactProvider } from "~/trpc/react";
 import Navigation from "~/components/Navigation";
+import { ibmPlexSansArabic } from "~/lib/fonts";
 
 export const metadata: Metadata = {
   title: "TEDx Event Management",
@@ -31,18 +31,32 @@ export default async function LocaleLayout({ children, params }: Props) {
   setRequestLocale(locale);
 
   const messages = await getMessages();
+  const isRTL = locale === "ar";
 
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
+    <html
+      lang={locale}
+      dir={isRTL ? "rtl" : "ltr"}
+      suppressHydrationWarning
+      className={
+        locale === "ar"
+          ? `${ibmPlexSansArabic.variable} font-arabic`
+          : "font-sans"
+      }
     >
-      <NextIntlClientProvider messages={messages}>
-        <Navigation />
-        <TRPCReactProvider>{children}</TRPCReactProvider>
-      </NextIntlClientProvider>
-    </ThemeProvider>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages}>
+            <Navigation />
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
