@@ -19,7 +19,7 @@ export const users = createTable("users", (d) => ({
     .$defaultFn(() => crypto.randomUUID()),
   name: d.text({ length: 255 }),
   email: d.text({ length: 255 }).notNull(),
-  type: d.text({ length: 50 }).default("visitor"),
+  type: d.text({ length: 7 }).default("visitor"),
   joiningAt: d
     .integer({ mode: "timestamp" })
     .default(sql`(unixepoch())`)
