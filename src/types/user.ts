@@ -7,4 +7,4 @@ export type User = {
   emailVerified: Date | null;
   image: string | null;
 };
-export type UserType = "normal" | "visitor" | "speaker" | "admin";
+export type UserType = "visitor" | "speaker" | "admin";
