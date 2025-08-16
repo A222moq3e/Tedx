@@ -23,10 +23,10 @@ function HomeContent() {
       </div>
       <div className="flex flex-col sm:flex-row gap-4">
         <Link
-          href="/#"
+          href="#agenda"
           className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
         >
-          {t("heroTitle")}
+          {t("viewAgenda")}
         </Link>
       </div>
       {/* Features Grid */}
@@ -60,6 +60,21 @@ function HomeContent() {
           {t("readyDescription")}
         </p>
       </div>
+
+      {/* Agenda Section Placeholder */}
+      <section id="agenda" className="w-full mt-20 pt-16">
+        <div className="text-center space-y-6">
+          <h2 className="text-4xl font-bold">{t("agendaTitle")}</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            {t("agendaDescription")}
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
+            <div className="text-6xl mb-4">📅</div>
+            <h3 className="text-2xl font-semibold mb-2">{t("comingSoon")}</h3>
+            <p className="text-gray-300">{t("agendaComingSoon")}</p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
@@ -68,8 +83,19 @@ export default async function Home({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-red-900 to-black text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
+    <main 
+      className="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-primary/90 to-black text-white overflow-hidden"
+      style={{
+        backgroundImage: "url('/pattern1.svg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
+      {/* Dark overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-black/40 z-0"></div>
+      
+      <div className="relative z-10 container flex flex-col items-center justify-center gap-12 px-4 py-16">
         <HomeContent />
       </div>
     </main>
