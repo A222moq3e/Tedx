@@ -1,12 +1,7 @@
 import "~/styles/globals.css";
 
 import { type Metadata } from "next";
-import { Geist } from "next/font/google";
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
+import { geist, ibmPlexSansArabic } from "~/lib/fonts";
 
 export const metadata: Metadata = {
   title: "TEDx Event Management",
@@ -20,7 +15,7 @@ type Props = {
 
 export default function RootLayout({ children }: Props) {
   return (
-    <html suppressHydrationWarning className={`${geist.variable}`}>
+    <html suppressHydrationWarning className={`${geist.variable} ${ibmPlexSansArabic.variable}`}>
       <body>{children}</body>
     </html>
   );

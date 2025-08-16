@@ -4,12 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-geist-sans), "Geist", Helvetica, "Helvetica Neue", Arial, sans-serif;
   --font-serif: "Times New Roman", Times, serif;
   --font-mono:
     "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New",
     monospace;
-  --font-arabic: var(--font-arabic), "Segoe UI", Tahoma, sans-serif;
+  --font-arabic: var(--font-arabic), "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
 }
 
 :root {
