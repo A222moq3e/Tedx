@@ -72,7 +72,7 @@ export default function EventsPage() {
       description: formData.description || undefined,
       type: formData.type,
       date: new Date(formData.date),
-      capacity: formData.capacity,
+      capacity: formData.capacity,  
       presenterId: formData.presenterId || undefined,
     });
   };
