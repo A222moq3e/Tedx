@@ -39,25 +39,16 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html 
-      lang={locale} 
-      dir={locale === 'ar' ? 'rtl' : 'ltr'}
-      suppressHydrationWarning 
-      className={`${geist.variable}`}
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
     >
-      <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider messages={messages}>
-            <Navigation />
-            <TRPCReactProvider>{children}</TRPCReactProvider>
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+      <NextIntlClientProvider messages={messages}>
+        <Navigation />
+        <TRPCReactProvider>{children}</TRPCReactProvider>
+      </NextIntlClientProvider>
+    </ThemeProvider>
   );
 }
