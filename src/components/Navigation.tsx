@@ -12,13 +12,13 @@ export default function Navigation() {
   const t = useTranslations("Navigation");
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-200">
+    <nav className="bg-background shadow-sm border-b border-border">
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-8">
             <Link href="/" className="flex items-center">
-              <span className="text-xl font-bold text-red-600">TEDx</span>
-              <span className="ml-2 text-xl font-bold text-gray-900">
+              <span className="text-xl font-bold text-primary">TEDx</span>
+              <span className="ml-2 text-xl font-bold text-foreground">
                 {isAdminPage ? t("adminBrandSuffix") : ''}
               </span>
             </Link>

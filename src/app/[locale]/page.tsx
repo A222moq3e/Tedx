@@ -61,20 +61,6 @@ function HomeContent() {
         </p>
       </div>
 
-      {/* Agenda Section Placeholder */}
-      <section id="agenda" className="w-full mt-20 pt-16">
-        <div className="text-center space-y-6">
-          <h2 className="text-4xl font-bold">{t("agendaTitle")}</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {t("agendaDescription")}
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
-            <div className="text-6xl mb-4">📅</div>
-            <h3 className="text-2xl font-semibold mb-2">{t("comingSoon")}</h3>
-            <p className="text-gray-300">{t("agendaComingSoon")}</p>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
