@@ -10,7 +10,7 @@ export const usersRouter = createTRPCRouter({
       z.object({
         name: z.string().min(1),
         email: z.string().email(),
-        type: z.string().optional().default("visitor"),
+        type: z.enum(["visitor", "speaker", "admin"]).optional().default("visitor"),
         // Speaker-specific fields (only required when type is "speaker")
         position: z.string().optional(),
         specialization: z.string().optional(),
@@ -72,7 +72,7 @@ export const usersRouter = createTRPCRouter({
         id: z.string(),
         name: z.string().min(1).optional(),
         email: z.string().email().optional(),
-        type: z.string().optional(),
+        type: z.enum(["visitor", "speaker", "admin"]).optional(),
         // Speaker-specific fields
         position: z.string().optional(),
         specialization: z.string().optional(),

@@ -5,7 +5,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing, type Locale } from "~/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
-
 import { ThemeProvider } from "~/components/theme-provider";
 
 import { TRPCReactProvider } from "~/trpc/react";
