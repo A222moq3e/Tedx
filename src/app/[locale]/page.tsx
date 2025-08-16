@@ -12,10 +12,6 @@ function HomeContent() {
   const t = useTranslations("HomePage");
   return (
     <>
-      <div className="mb-8 text-center">
-        <h2 className="mb-2 text-3xl font-bold text-foreground">{t("welcome")}</h2>
-        <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
-      </div>
       {/* Hero Section */}
       <div className="text-center space-y-6">
         <h1 className="text-6xl font-extrabold tracking-tight sm:text-[7rem]">
@@ -28,9 +24,9 @@ function HomeContent() {
       <div className="flex flex-col sm:flex-row gap-4">
         <Link
           href="/#"
-          className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
         >
-          Hello world!
+          {t("heroTitle")}
         </Link>
       </div>
       {/* Features Grid */}

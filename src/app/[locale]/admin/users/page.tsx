@@ -97,7 +97,7 @@ export default function UsersPage() {
         <h1 className="text-3xl font-bold text-gray-900">User Management</h1>
         <button
           onClick={startCreating}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-lg font-medium transition-colors"
         >
           Add New User
         </button>
@@ -122,8 +122,8 @@ export default function UsersPage() {
                 key={user.id}
                 className={`p-3 border rounded-lg mb-3 cursor-pointer transition-colors ${
                   selectedUser?.id === user.id
-                    ? "border-blue-500 bg-blue-50"
-                    : "border-gray-200 hover:border-gray-300"
+                    ? "border-primary bg-primary/10"
+                    : "border-border hover:border-border/60"
                 }`}
                 onClick={() => setSelectedUser(user)}
               >
@@ -136,10 +136,10 @@ export default function UsersPage() {
                     <div className="flex gap-2 mt-1">
                                       <span className={`text-xs px-2 py-1 rounded ${
                       user.type === "admin" 
-                        ? "bg-red-100 text-red-700" 
+                        ? "bg-destructive/20 text-destructive" 
                         : user.type === "speaker" 
-                        ? "bg-blue-100 text-blue-700" 
-                        : "bg-gray-100 text-gray-700"
+                        ? "bg-primary/20 text-primary" 
+                        : "bg-muted text-muted-foreground"
                     }`}>
                         {user.type ?? "visitor"}
                     </span>
@@ -151,7 +151,7 @@ export default function UsersPage() {
                         e.stopPropagation();
                         startEditing(user);
                       }}
-                      className="text-blue-600 hover:text-blue-800 px-2 py-1 text-sm"
+                      className="text-primary hover:text-primary/80 px-2 py-1 text-sm"
                     >
                       Edit
                     </button>
@@ -160,7 +160,7 @@ export default function UsersPage() {
                         e.stopPropagation();
                         handleDeleteUser(user.id);
                       }}
-                      className="text-red-600 hover:text-red-800 px-2 py-1 text-sm"
+                      className="text-destructive hover:text-destructive/80 px-2 py-1 text-sm"
                     >
                       Delete
                     </button>
@@ -271,14 +271,14 @@ export default function UsersPage() {
                   <button
                     type="submit"
                     disabled={createUser.isPending}
-                    className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md font-medium disabled:opacity-50 transition-colors"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-md font-medium disabled:opacity-50 transition-colors"
                   >
                     {createUser.isPending ? "Creating..." : "Create User"}
                   </button>
                   <button
                     type="button"
                     onClick={() => setShowCreateForm(false)}
-                    className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md font-medium transition-colors"
+                    className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-4 py-2 rounded-md font-medium transition-colors"
                   >
                     Cancel
                   </button>
@@ -378,14 +378,14 @@ export default function UsersPage() {
                   <button
                     type="submit"
                     disabled={updateUser.isPending}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium disabled:opacity-50 transition-colors"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-md font-medium disabled:opacity-50 transition-colors"
                   >
                     {updateUser.isPending ? "Updating..." : "Update User"}
                   </button>
                   <button
                     type="button"
                     onClick={() => setIsEditing(false)}
-                    className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md font-medium transition-colors"
+                    className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-4 py-2 rounded-md font-medium transition-colors"
                   >
                     Cancel
                   </button>
@@ -439,13 +439,13 @@ export default function UsersPage() {
                 <div className="flex gap-2 pt-2">
                   <button
                     onClick={() => startEditing(selectedUser)}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition-colors"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-md font-medium transition-colors"
                   >
                     Edit User
                   </button>
                   <button
                     onClick={() => handleDeleteUser(selectedUser.id)}
-                    className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-medium transition-colors"
+                    className="bg-destructive hover:bg-destructive/90 text-destructive-foreground px-4 py-2 rounded-md font-medium transition-colors"
                   >
                     Delete User
                   </button>
@@ -465,7 +465,7 @@ export default function UsersPage() {
                 </p>
                 <button
                   onClick={startCreating}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition-colors"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-md font-medium transition-colors"
                 >
                   Create First User
                 </button>
@@ -479,7 +479,7 @@ export default function UsersPage() {
       {(createUser.isPending || updateUser.isPending || deleteUser.isPending) && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"></div>
             <p className="mt-2 text-gray-700">Processing...</p>
           </div>
         </div>

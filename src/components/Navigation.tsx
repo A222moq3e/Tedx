@@ -30,8 +30,8 @@ export default function Navigation() {
                     href="/admin/users"
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       pathname?.includes("/admin/users")
-                        ? "bg-red-100 text-red-700"
-                        : "text-gray-700 hover:text-red-600"
+                        ? "bg-primary/20 text-primary"
+                        : "text-foreground hover:text-primary"
                     }`}
                   >
                     👥 {t("users")}
@@ -40,8 +40,8 @@ export default function Navigation() {
                     href="/admin/events"
                     className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       pathname?.includes("/admin/events")
-                        ? "bg-red-100 text-red-700"
-                        : "text-gray-700 hover:text-red-600"
+                        ? "bg-primary/20 text-primary"
+                        : "text-foreground hover:text-primary"
                     }`}
                   >
                     🎪 {t("events")}
@@ -52,7 +52,7 @@ export default function Navigation() {
                 <>
                   <Link
                     href="/admin"
-                    className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     🔐 {t("admin")}
                   </Link>
@@ -65,14 +65,14 @@ export default function Navigation() {
               <>
                 <Link
                   href="/api/trpc/health.check"
-                  className="text-green-600 hover:text-green-700 text-sm font-medium px-2 py-1 rounded-md hover:bg-green-50 transition-colors"
+                  className="text-primary hover:text-primary/80 text-sm font-medium px-2 py-1 rounded-md hover:bg-primary/10 transition-colors"
                   target="_blank"
                 >
                   📊 {t("apiStatus")}
                 </Link>
                 <Link
                   href="/"
-                  className="text-gray-600 hover:text-gray-800 text-sm font-medium px-2 py-1 rounded-md hover:bg-gray-50 transition-colors"
+                  className="text-muted-foreground hover:text-foreground text-sm font-medium px-2 py-1 rounded-md hover:bg-muted/50 transition-colors"
                 >
                   ← {t("backToHome")}
                 </Link>
