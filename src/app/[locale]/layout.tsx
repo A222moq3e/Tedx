@@ -1,5 +1,3 @@
-import "~/styles/globals.css";
-
 import { type Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -31,17 +29,22 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   const messages = await getMessages();
 
+  // Apply the appropriate font family based on locale
+  const fontClass = locale === 'ar' ? 'font-arabic' : 'font-sans';
+
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <NextIntlClientProvider messages={messages}>
-        <Navigation />
-        <TRPCReactProvider>{children}</TRPCReactProvider>
-      </NextIntlClientProvider>
-    </ThemeProvider>
+    <div className={fontClass}>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <NextIntlClientProvider messages={messages}>
+          <Navigation />
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+        </NextIntlClientProvider>
+      </ThemeProvider>
+    </div>
   );
 }
