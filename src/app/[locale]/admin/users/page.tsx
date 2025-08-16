@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { api } from "~/trpc/react";
-import type { User } from "~/types/user";
+import type { User, UserType } from "~/types/user";
 
 type UserFormData = {
   name: string;
   email: string;
-  type: string;
+  type: UserType;
   // Speaker-specific fields
   position?: string;
   specialization?: string;
@@ -76,7 +76,7 @@ export default function UsersPage() {
     setFormData({
       name: user.name ?? "",
       email: user.email,
-      type: user.type ?? "visitor",
+      type: (user.type as UserType) ?? "visitor",
       position: "",
       specialization: "",
     });
@@ -223,7 +223,7 @@ export default function UsersPage() {
                   <select
                     value={formData.type}
                     onChange={(e) =>
-                      setFormData({ ...formData, type: e.target.value })
+                      setFormData({ ...formData, type: e.target.value as UserType })
                     }
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
@@ -330,7 +330,7 @@ export default function UsersPage() {
                   <select
                     value={formData.type}
                     onChange={(e) =>
-                      setFormData({ ...formData, type: e.target.value })
+                      setFormData({ ...formData, type: e.target.value as UserType })
                     }
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >

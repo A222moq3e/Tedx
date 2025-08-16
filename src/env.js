@@ -8,7 +8,6 @@ if (process.env.NODE_ENV !== "production") {
     typeof value === "string" && value.length > 6
       ? `${value.slice(0, 3)}***${value.slice(-3)}`
       : value ?? "<unset>";
-  // eslint-disable-next-line no-console
   console.log("🔍 ENV DEBUG:", {
     AUTH_SECRET: mask(process.env.AUTH_SECRET),
     DATABASE_URL: mask(process.env.DATABASE_URL),

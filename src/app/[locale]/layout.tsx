@@ -5,17 +5,10 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing, type Locale } from "~/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
-import { Geist } from "next/font/google";
-
 import { ThemeProvider } from "~/components/theme-provider";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import Navigation from "~/components/Navigation";
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
 
 export const metadata: Metadata = {
   title: "TEDx Event Management",
