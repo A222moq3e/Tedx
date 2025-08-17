@@ -1,27 +1,22 @@
 "use client";
 
-import { Globe } from "lucide-react";
 import { useLocale } from "next-intl";
 import { type Locale } from "~/i18n/routing";
 import { useRouter, usePathname } from "~/i18n/navigation";
-import { Button } from "~/components/ui/button";
+import { ChevronDown, Globe, Check } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
-import { routing } from "~/i18n/routing";
-
-const localeNames: Record<Locale, string> = {
-  en: "English",
-  ar: "العربية",
-};
 
 export function LanguageSwitcher() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+
+  const isArabic = locale === "ar";
 
   const switchLocale = (newLocale: Locale) => {
     router.replace(pathname, { locale: newLocale });
@@ -29,35 +24,43 @@ export function LanguageSwitcher() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button 
-          variant="outline" 
-          size="sm"
-          className="h-9 px-3 border-gray-200 hover:border-red-300 hover:bg-red-50 hover:text-red-700 transition-all duration-200 shadow-sm"
-        >
-          <Globe className="mr-2 h-4 w-4 text-gray-500" />
-          <span className="font-medium">{localeNames[locale]}</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent 
-        align="end" 
-        className="w-40 border-gray-200 shadow-lg"
-        sideOffset={8}
+      <DropdownMenuTrigger
+        className="group hover:bg-muted/80 text-muted-foreground hover:text-foreground inline-flex items-center justify-center gap-1 rounded-md px-2 py-2 text-sm font-medium transition-colors"
+        aria-label={isArabic ? "تغيير اللغة" : "Change language"}
       >
-        {routing.locales.map((loc) => (
-          <DropdownMenuItem 
-            key={loc} 
-            onClick={() => switchLocale(loc)}
-            className={`cursor-pointer hover:bg-red-50 hover:text-red-700 transition-colors ${
-              locale === loc ? 'bg-red-100 text-red-700 font-medium' : ''
-            }`}
-          >
-            <div className="flex items-center justify-between w-full">
-              <span>{localeNames[loc]}</span>
-              {locale === loc && <span className="text-red-500">✓</span>}
-            </div>
-          </DropdownMenuItem>
-        ))}
+        <Globe className="h-3.5 w-3.5" />
+        <span className="min-w-[1.5ch] text-center">
+          {isArabic ? "ع" : "EN"}
+        </span>
+        <ChevronDown className="h-3 w-3" />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="min-w-[160px]">
+        <DropdownMenuItem
+          onClick={() => switchLocale("en")}
+          className={`flex items-center gap-2 ${
+            !isArabic ? "bg-primary/10 text-foreground" : "hover:bg-accent"
+          }`}
+        >
+          {!isArabic ? (
+            <Check className="h-4 w-4" />
+          ) : (
+            <span className="inline-block h-4 w-4" />
+          )}
+          <span>English</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => switchLocale("ar")}
+          className={`flex items-center gap-2 ${
+            isArabic ? "bg-primary/10 text-foreground" : "hover:bg-accent"
+          }`}
+        >
+          {isArabic ? (
+            <Check className="h-4 w-4" />
+          ) : (
+            <span className="inline-block h-4 w-4" />
+          )}
+          <span>العربية</span>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

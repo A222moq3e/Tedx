@@ -44,7 +44,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           : "font-sans"
       }
     >
-      <body>
+      <body className="overflow-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -52,8 +52,12 @@ export default async function LocaleLayout({ children, params }: Props) {
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
-            <Navigation />
-            {children}
+            <div className="fixed inset-0 w-full overflow-y-auto overscroll-y-none">
+              <Navigation />
+              <div className="pt-14 min-h-screen bg-background">
+                {children}
+              </div>
+            </div>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

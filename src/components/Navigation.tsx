@@ -12,14 +12,17 @@ export default function Navigation() {
   const t = useTranslations("Navigation");
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-200">
-      <div className="container mx-auto px-6">
-        <div className="flex justify-between items-center h-16">
+    <header>
+      {/* <nav className="border-border z-50 w-full border-b bg-white/40 shadow-sm backdrop-blur dark:bg-black/30"> */}
+  <nav className="fixed top-0 z-50 w-full bg-gradient-to-b from-background/80 to-background/0 px-4">
+        <div className="flex h-14 items-center justify-between">
           <div className="flex items-center space-x-8">
             <Link href="/" className="flex items-center">
-              <span className="text-xl font-bold text-red-600">TEDx</span>
-              <span className="ml-2 text-xl font-bold text-gray-900">
-                {isAdminPage ? t("adminBrandSuffix") : ''}
+              <span className="text-primary font-sans text-xl font-bold">
+                TEDx
+              </span>
+              <span className="text-foreground ml-2 text-xl font-bold">
+                {isAdminPage ? t("adminBrandSuffix") : ""}
               </span>
             </Link>
             <div className="flex space-x-6">
@@ -28,20 +31,20 @@ export default function Navigation() {
                 <>
                   <Link
                     href="/admin/users"
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                       pathname?.includes("/admin/users")
-                        ? "bg-red-100 text-red-700"
-                        : "text-gray-700 hover:text-red-600"
+                        ? "bg-primary/10 text-primary"
+                        : "text-muted-foreground hover:text-primary"
                     }`}
                   >
                     👥 {t("users")}
                   </Link>
                   <Link
                     href="/admin/events"
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                       pathname?.includes("/admin/events")
-                        ? "bg-red-100 text-red-700"
-                        : "text-gray-700 hover:text-red-600"
+                        ? "bg-primary/10 text-primary"
+                        : "text-muted-foreground hover:text-primary"
                     }`}
                   >
                     🎪 {t("events")}
@@ -52,7 +55,7 @@ export default function Navigation() {
                 <>
                   <Link
                     href="/admin"
-                    className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-md px-4 py-2 text-sm font-medium transition-colors"
                   >
                     🔐 {t("admin")}
                   </Link>
@@ -60,22 +63,23 @@ export default function Navigation() {
               )}
             </div>
           </div>
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-4">
             {isAdminPage && (
               <>
                 <Link
                   href="/api/trpc/health.check"
-                  className="text-green-600 hover:text-green-700 text-sm font-medium px-2 py-1 rounded-md hover:bg-green-50 transition-colors"
+                  className="rounded-md px-2 py-1 text-sm font-medium text-green-600 transition-colors hover:bg-green-50 hover:text-green-700 dark:text-green-400 dark:hover:bg-green-950/20 dark:hover:text-green-300"
                   target="_blank"
                 >
                   📊 {t("apiStatus")}
                 </Link>
                 <Link
                   href="/"
-                  className="text-gray-600 hover:text-gray-800 text-sm font-medium px-2 py-1 rounded-md hover:bg-gray-50 transition-colors"
+                  className="text-muted-foreground hover:text-foreground hover:bg-muted rounded-md px-2 py-1 text-sm font-medium transition-colors"
                 >
                   ← {t("backToHome")}
                 </Link>
+                <div className="bg-border h-5 w-px" />
               </>
             )}
             <div className="flex items-center space-x-2">
@@ -84,7 +88,7 @@ export default function Navigation() {
             </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
