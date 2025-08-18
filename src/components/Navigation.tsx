@@ -13,8 +13,7 @@ export default function Navigation() {
 
   return (
     <header>
-      {/* <nav className="border-border z-50 w-full border-b bg-white/40 shadow-sm backdrop-blur dark:bg-black/30"> */}
-  <nav className="fixed top-0 z-50 w-full bg-gradient-to-b from-background/80 to-background/0 px-4">
+      <nav className="fixed top-0 z-50 w-full bg-gradient-to-b from-black/40 to-transparent px-4">
         <div className="flex h-14 items-center justify-between">
           <div className="flex items-center space-x-8">
             <Link href="/" className="flex items-center">
@@ -68,7 +67,7 @@ export default function Navigation() {
               <>
                 <Link
                   href="/api/trpc/health.check"
-                  className="rounded-md px-2 py-1 text-sm font-medium text-green-600 transition-colors hover:bg-green-50 hover:text-green-700 dark:text-green-400 dark:hover:bg-green-950/20 dark:hover:text-green-300"
+                  className="text-primary hover:text-primary/80 hover:bg-primary/10 rounded-md px-2 py-1 text-sm font-medium transition-colors"
                   target="_blank"
                 >
                   📊 {t("apiStatus")}

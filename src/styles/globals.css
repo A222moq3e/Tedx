@@ -19,19 +19,19 @@
   --card-foreground: oklch(0 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0 0 0);
-  --primary: oklch(0.5293 0.2165 29.3357);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.2976 0.1475 262.8304);
-  --secondary-foreground: oklch(1 0 0);
+  --primary: oklch(0.37 0.26 27.7); /* TEDx Red #cb0200 */
+  --primary-foreground: oklch(1 0 0); /* White */
+  --secondary: oklch(0.22 0.07 289.4); /* TEDx Blue #002175 */
+  --secondary-foreground: oklch(1 0 0); /* White */
   --muted: oklch(0.9702 0 0);
   --muted-foreground: oklch(0.5278 0 0);
-  --accent: oklch(0.9702 0 0);
-  --accent-foreground: oklch(0.1448 0 0);
-  --destructive: oklch(0.5293 0.2165 29.3357);
-  --destructive-foreground: oklch(1 0 0);
+  --accent: oklch(0.22 0.07 289.4); /* TEDx Blue for accents */
+  --accent-foreground: oklch(1 0 0); /* White text on blue */
+  --destructive: oklch(0.37 0.26 27.7); /* TEDx Red for destructive actions */
+  --destructive-foreground: oklch(1 0 0); /* White text on red */
   --border: oklch(0.9219 0 0);
   --input: oklch(0.9219 0 0);
-  --ring: oklch(0.5293 0.2165 29.3357);
+  --ring: oklch(0.37 0.26 27.7); /* TEDx Red for focus rings */
   --chart-1: oklch(0.5293 0.2165 29.3357);
   --chart-2: oklch(0.2976 0.1475 262.8304);
   --chart-3: oklch(0.4386 0 0);
@@ -70,19 +70,19 @@
   --card-foreground: oklch(1 0 0);
   --popover: oklch(0.2178 0 0);
   --popover-foreground: oklch(1 0 0);
-  --primary: oklch(0.5293 0.2165 29.3357);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.2976 0.1475 262.8304);
-  --secondary-foreground: oklch(1 0 0);
+  --primary: oklch(0.37 0.26 27.7); /* TEDx Red #cb0200 */
+  --primary-foreground: oklch(1 0 0); /* White */
+  --secondary: oklch(0.22 0.07 289.4); /* TEDx Blue #002175 */
+  --secondary-foreground: oklch(1 0 0); /* White */
   --muted: oklch(0.2178 0 0);
   --muted-foreground: oklch(0.7155 0 0);
-  --accent: oklch(0.3211 0 0);
-  --accent-foreground: oklch(0.9702 0 0);
-  --destructive: oklch(0.5293 0.2165 29.3357);
-  --destructive-foreground: oklch(1 0 0);
+  --accent: oklch(0.22 0.07 289.4); /* TEDx Blue for accents */
+  --accent-foreground: oklch(1 0 0); /* White text on blue */
+  --destructive: oklch(0.37 0.26 27.7); /* TEDx Red for destructive actions */
+  --destructive-foreground: oklch(1 0 0); /* White text on red */
   --border: oklch(0.2686 0 0);
   --input: oklch(0.2686 0 0);
-  --ring: oklch(0.5293 0.2165 29.3357);
+  --ring: oklch(0.37 0.26 27.7); /* TEDx Red for focus rings */
   --chart-1: oklch(0.5293 0.2165 29.3357);
   --chart-2: oklch(0.2976 0.1475 262.8304);
   --chart-3: oklch(0.9067 0 0);

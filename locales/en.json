@@ -13,6 +13,7 @@
     "welcome": "Welcome",
     "subtitle": "Ideas Worth Spreading - Join us for an inspiring journey of innovation, creativity, and thought-provoking conversations.",
     "heroTitle": "TEDx Event",
+    "viewAgenda": "View Agenda",
     "adminPanel": "Admin Panel",
     "speakersTitle": "Speakers",
     "speakersDescription": "Connect with inspiring speakers sharing groundbreaking ideas.",
@@ -21,7 +22,11 @@
     "communityTitle": "Community",
     "communityDescription": "Join a community of innovators, creators, and change-makers.",
     "readyTitle": "Ready to Get Started?",
-    "readyDescription": "Explore our management tools and join the TEDx experience."
+    "readyDescription": "Explore our management tools and join the TEDx experience.",
+    "agendaTitle": "Event Agenda",
+    "agendaDescription": "Discover our carefully curated schedule of inspiring talks, interactive workshops, and transformative experiences.",
+    "comingSoon": "Coming Soon",
+    "agendaComingSoon": "Our detailed event agenda will be available soon. Stay tuned for exciting updates!"
   },
   "AdminDashboard": {
     "title": "Admin Dashboard",

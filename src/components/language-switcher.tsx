@@ -25,7 +25,7 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        className="group hover:bg-muted/80 text-muted-foreground hover:text-foreground inline-flex items-center justify-center gap-1 rounded-md px-2 py-2 text-sm font-medium transition-colors"
+        className="group dark:text-muted-foreground dark:hover:text-foreground dark:hover:bg-muted/80 inline-flex items-center justify-center gap-1 rounded-md px-2 py-2 text-sm font-medium text-white/90 transition-colors hover:bg-white/10 hover:text-white"
         aria-label={isArabic ? "تغيير اللغة" : "Change language"}
       >
         <Globe className="h-3.5 w-3.5" />

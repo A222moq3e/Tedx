@@ -1,11 +1,8 @@
-import "~/styles/globals.css";
-
 import { type Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing, type Locale } from "~/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
-
 import { ThemeProvider } from "~/components/theme-provider";
 
 import Navigation from "~/components/Navigation";
@@ -54,7 +51,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <NextIntlClientProvider messages={messages}>
             <div className="fixed inset-0 w-full overflow-y-auto overscroll-y-none">
               <Navigation />
-              <div className="pt-14 min-h-screen bg-background">
+              <div className="min-h-screen">
                 {children}
               </div>
             </div>
