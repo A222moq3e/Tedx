@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Team Meeting",
+    "start": "2025-09-01T10:00:00Z",
+    "end": "2025-09-01T11:00:00Z",
+    "location": "Zoom",
+    "description": "Discuss Q3"
+  },
+  {
+    "title": "Workshop: Building with Next.js",
+    "start": "2025-09-05T09:00:00Z",
+    "end": "2025-09-05T12:00:00Z",
+    "location": "Main Hall",
+    "description": "Hands-on workshop"
+  }
+]

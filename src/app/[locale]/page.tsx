@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "~/i18n/routing";
 import { Link } from "~/i18n/navigation";
 import { useTranslations } from "next-intl";
+import DownloadIcsButton from "~/components/download-Ics-Button";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -28,6 +29,7 @@ function HomeContent() {
         >
           {t("viewAgenda")}
         </Link>
+        <DownloadIcsButton />
       </div>
       {/* Features Grid */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 md:gap-8 mt-12">
