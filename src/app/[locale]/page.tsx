@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "~/i18n/routing";
 import { Link } from "~/i18n/navigation";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -14,9 +15,14 @@ function HomeContent() {
     <>
       {/* Hero Section */}
       <div className="text-center space-y-6 min-h-[80vh] flex flex-col justify-center items-center">
-        <h1 className="text-6xl font-extrabold tracking-tight sm:text-[7rem] text-gray-900 dark:text-white">
-          {t("heroTitle")}
-        </h1>
+        <Image
+          src="/logos_svg/(1)-01.svg"
+          alt={t("heroTitle")}
+          width={400}
+          height={400}
+          className="w-96 h-96 sm:w-[28rem] sm:h-[28rem] object-contain"
+          priority
+        />
         <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           {t("subtitle")}
         </p>
