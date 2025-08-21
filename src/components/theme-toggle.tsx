@@ -63,20 +63,7 @@ export function ModeToggle() {
             {theme === "dark" && <span className="text-secondary">✓</span>}
           </div>
         </DropdownMenuItem>
-        <DropdownMenuItem 
-          onClick={() => setTheme("system")}
-          className={`cursor-pointer hover:bg-accent/50 hover:text-accent-foreground transition-colors ${
-            theme === "system" ? 'bg-accent text-accent-foreground font-medium' : ''
-          }`}
-        >
-          <div className="flex items-center justify-between w-full">
-            <div className="flex items-center">
-              <div className="mr-2 h-4 w-4 rounded-full bg-gradient-to-r from-amber-400 to-blue-600"></div>
-              <span>{t("system")}</span>
-            </div>
-            {theme === "system" && <span className="text-accent-foreground">✓</span>}
-          </div>
-        </DropdownMenuItem>
+
       </DropdownMenuContent>
     </DropdownMenu>
   )

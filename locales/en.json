@@ -26,7 +26,10 @@
     "agendaTitle": "Event Agenda",
     "agendaDescription": "Discover our carefully curated schedule of inspiring talks, interactive workshops, and transformative experiences.",
     "comingSoon": "Coming Soon",
-    "agendaComingSoon": "Our detailed event agenda will be available soon. Stay tuned for exciting updates!"
+    "agendaComingSoon": "Our detailed event agenda will be available soon. Stay tuned for exciting updates!",
+    "mapTitle": "Event Map",
+    "mapDescription": "Download the event map to navigate the venue and find all the important locations.",
+    "downloadMap": "Download Map"
   },
   "AdminDashboard": {
     "title": "Admin Dashboard",

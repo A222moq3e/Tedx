@@ -36,7 +36,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <div className={fontClass}>
       <ThemeProvider
         attribute="class"
-        defaultTheme="system"
+        defaultTheme="dark"
         enableSystem
         disableTransitionOnChange
       >
