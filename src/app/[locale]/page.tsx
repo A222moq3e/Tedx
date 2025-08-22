@@ -96,13 +96,7 @@ export default async function Home({ params }: Props) {
   setRequestLocale(locale);
   return (
     <main
-      className="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-white dark:from-primary/90 dark:to-black text-gray-900 dark:text-white overflow-hidden"
-      style={{
-        backgroundImage: "url('/pattern1.svg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
-      }}
+      className="relative flex min-h-screen flex-col items-center justify-center tedx-animated-bg text-gray-900 dark:text-white overflow-hidden"
     >
       {/* Overlay for text readability */}
       <div className="absolute inset-0 bg-white/20 dark:bg-black/40 z-0"></div>
