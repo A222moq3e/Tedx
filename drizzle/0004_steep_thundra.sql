@@ -1,0 +1,1 @@
+ALTER TABLE `tedx_accounts` DROP COLUMN `id`;

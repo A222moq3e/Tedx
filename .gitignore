@@ -44,3 +44,7 @@ yarn-error.log*
 
 # idea files
 .idea
+
+# prevent accidental npm/yarn lockfiles
+package-lock.json
+yarn.lock
