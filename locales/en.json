@@ -29,7 +29,14 @@
     "agendaComingSoon": "Our detailed event agenda will be available soon. Stay tuned for exciting updates!",
     "mapTitle": "Event Map",
     "mapDescription": "Download the event map to navigate the venue and find all the important locations.",
-    "downloadMap": "Download Map"
+    "downloadMap": "Download Map",
+    "eventDetailsTitle": "Event Details",
+    "eventName": "TEDxImam Mohammed University",
+    "eventDate": "6 / 9 / 2025",
+    "eventTime": "12:00am - 12:00pm",
+    "eventTimezone": "(UTC +3hrs)",
+    "eventLocation": "Riyadh, Imam Mohammed Bin Saud University",
+    "eventCountry": "Saudi Arabia"
   },
   "AdminDashboard": {
     "title": "Admin Dashboard",
