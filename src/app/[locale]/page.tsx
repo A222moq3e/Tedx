@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { HeroSection } from "~/components/HeroSection";
 import { FeaturesGrid } from "~/components/FeaturesGrid";
 import { MapSection } from "~/components/MapSection";
+import { EventDetails } from "~/components/EventDetails";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -19,6 +20,9 @@ function HomeContent() {
     <>
       {/* Hero Section */}
       <HeroSection />
+      
+      {/* Event Details */}
+      <EventDetails />
       
       {/* Features Grid */}
       <FeaturesGrid />
