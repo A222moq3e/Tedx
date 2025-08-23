@@ -5,8 +5,8 @@ import { routing, type Locale } from "~/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "~/components/theme-provider";
 
-import { TRPCReactProvider } from "~/trpc/react";
 import Navigation from "~/components/Navigation";
+import { Providers } from "~/components/providers";
 
 export const metadata: Metadata = {
   title: "TEDx Event Management",
@@ -41,8 +41,10 @@ export default async function LocaleLayout({ children, params }: Props) {
         disableTransitionOnChange
       >
         <NextIntlClientProvider messages={messages}>
-          <Navigation />
-          <TRPCReactProvider>{children}</TRPCReactProvider>
+          <Providers>
+            <Navigation />
+            {children}
+          </Providers>
         </NextIntlClientProvider>
       </ThemeProvider>
     </div>

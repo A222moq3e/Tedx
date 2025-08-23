@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { LanguageSwitcher } from "./language-switcher";
 import { ModeToggle } from "./theme-toggle";
-import { AdminNavigation, AdminUtilityLinks } from "./AdminNavigation";
+import { AdminUtilityLinks } from "./AdminNavigation";
+import { AuthButton } from "./auth-button";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -36,6 +37,7 @@ export default function Navigation() {
           <div className="flex items-center space-x-3">
             {isAdminPage && <AdminUtilityLinks />}
             <div className="flex items-center space-x-2">
+              <AuthButton />
               <ModeToggle />
               <LanguageSwitcher />
             </div>
