@@ -1,9 +1,9 @@
 import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "~/i18n/routing";
-import { Link } from "~/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import Image from "next/image";
-import { Mic, Calendar, Users, MapPin } from "lucide-react";
+import { HeroSection } from "~/components/HeroSection";
+import { FeaturesGrid } from "~/components/FeaturesGrid";
+import { MapSection } from "~/components/MapSection";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -18,67 +18,13 @@ function HomeContent() {
   return (
     <>
       {/* Hero Section */}
-      <div className="text-center space-y-6 min-h-[80vh] flex flex-col justify-center items-center">
-        <Image
-          src="/logos_svg/(1)-01.svg"
-          alt={t("heroTitle")}
-          width={400}
-          height={400}
-          className="w-96 h-96 sm:w-[28rem] sm:h-[28rem] object-contain"
-          priority
-        />
-        <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          {t("subtitle")}
-        </p>
-        <div className="flex justify-center">
-          <Link
-            href="#agenda"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
-          >
-            {t("viewAgenda")}
-          </Link>
-        </div>
-      </div>
+      <HeroSection />
+      
       {/* Features Grid */}
-      <div className={`grid grid-cols-1 gap-6 sm:grid-cols-3 md:gap-8 mt-20 ${isArabic ? 'rtl' : 'ltr'}`}>
-        <div className={`flex flex-col gap-4 rounded-xl bg-gray-100/80 dark:bg-white/10 p-6 hover:bg-gray-200/80 dark:hover:bg-white/20 transition-colors border border-gray-200 dark:border-white/20 ${isArabic ? 'text-right' : 'text-left'}`}>
-          <Mic className="w-10 h-10 text-primary" />
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{t("speakersTitle")}</h3>
-          <p className="text-gray-600 dark:text-gray-300">
-            {t("speakersDescription")}
-          </p>
-        </div>
-        <div className={`flex flex-col gap-4 rounded-xl bg-gray-100/80 dark:bg-white/10 p-6 hover:bg-gray-200/80 dark:hover:bg-white/20 transition-colors border border-gray-200 dark:border-white/20 ${isArabic ? 'text-right' : 'text-left'}`}>
-          <Calendar className="w-10 h-10 text-primary" />
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{t("eventsTitle")}</h3>
-          <p className="text-gray-600 dark:text-gray-300">
-            {t("eventsDescription")}
-          </p>
-        </div>
-        <div className={`flex flex-col gap-4 rounded-xl bg-gray-100/80 dark:bg-white/10 p-6 hover:bg-gray-200/80 dark:hover:bg-white/20 transition-colors border border-gray-200 dark:border-white/20 ${isArabic ? 'text-right' : 'text-left'}`}>
-          <Users className="w-10 h-10 text-primary" />
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{t("communityTitle")}</h3>
-          <p className="text-gray-600 dark:text-gray-300">
-            {t("communityDescription")}
-          </p>
-        </div>
-      </div>
+      <FeaturesGrid />
 
       {/* Map Section */}
-      <div className={`flex flex-col gap-6 rounded-xl bg-gray-100/80 dark:bg-white/10 p-8 hover:bg-gray-200/80 dark:hover:bg-white/20 transition-colors mt-12 max-w-2xl mx-auto text-center border border-gray-200 dark:border-white/20 ${isArabic ? 'rtl' : 'ltr'}`}>
-        <MapPin className="w-12 h-12 text-primary mx-auto" />
-        <h3 className="text-3xl font-bold text-gray-900 dark:text-white">{t("mapTitle")}</h3>
-        <p className="text-gray-600 dark:text-gray-300 text-lg">
-          {t("mapDescription")}
-        </p>
-        <a
-          href="/map1.pdf"
-          download="TEDx_Event_Map.pdf"
-          className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
-        >
-          {t("downloadMap")}
-        </a>
-      </div>
+      <MapSection />
 
       {/* Call to Action */}
       <div className={`text-center space-y-4 mt-12 ${isArabic ? 'rtl' : 'ltr'}`}>
@@ -87,7 +33,6 @@ function HomeContent() {
           {t("readyDescription")}
         </p>
       </div>
-
     </>
   );
 }
