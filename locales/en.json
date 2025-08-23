@@ -147,5 +147,10 @@
   "AdminLayout": {
     "footerText": "TEDx Admin Panel - Manage your event",
     "adminDashboard": "Admin Dashboard"
+  },
+  "Auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "loading": "Loading..."
   }
 }

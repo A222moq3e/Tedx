@@ -161,6 +161,41 @@
   --shadow-2xl: var(--shadow-2xl);
 }
 
+/* Smooth Animated Background inspired by CodePen */
+@keyframes tedxGradientMove {
+  0% { 
+    background-position: 0% 50%;
+  }
+  50% { 
+    background-position: 100% 50%;
+  }
+  100% { 
+    background-position: 0% 50%;
+  }
+}
+
+.tedx-animated-bg {
+  background: linear-gradient(-45deg, 
+    oklch(0.37 0.26 27.7), /* TEDx Red */
+    oklch(0.22 0.07 289.4), /* TEDx Blue */
+    oklch(0.9821 0 0), /* Light gray */
+    oklch(0.37 0.26 27.7) /* TEDx Red */
+  );
+  background-size: 400% 400%;
+  animation: tedxGradientMove 15s ease infinite;
+}
+
+.dark .tedx-animated-bg {
+  background: linear-gradient(-45deg, 
+    oklch(0.37 0.26 27.7), /* TEDx Red */
+    oklch(0.22 0.07 289.4), /* TEDx Blue */
+    oklch(0.2178 0 0), /* Dark gray */
+    oklch(0.37 0.26 27.7) /* TEDx Red */
+  );
+  background-size: 400% 400%;
+  animation: tedxGradientMove 15s ease infinite;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

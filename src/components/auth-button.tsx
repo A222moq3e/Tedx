@@ -11,14 +11,16 @@ import {
 } from "~/components/ui/dropdown-menu";
 import { User, LogOut, Settings } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function AuthButton() {
   const { data: session, status } = useSession();
+  const t = useTranslations("Auth");
 
   if (status === "loading") {
     return (
       <Button variant="ghost" size="sm" disabled>
-        Loading...
+        {t("loading")}
       </Button>
     );
   }
@@ -31,7 +33,7 @@ export function AuthButton() {
         onClick={() => signIn("google")}
         className="bg-primary hover:bg-primary/90"
       >
-        Sign In
+        {t("signIn")}
       </Button>
     );
   }
@@ -68,7 +70,7 @@ export function AuthButton() {
           onClick={() => signOut()}
         >
           <LogOut className="mr-2 h-4 w-4" />
-          <span>Sign out</span>
+          <span>{t("signOut")}</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

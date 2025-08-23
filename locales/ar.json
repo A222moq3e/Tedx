@@ -144,5 +144,10 @@
   "AdminLayout": {
     "footerText": "لوحة إدارة تيدكس - أدر فعاليتك",
     "adminDashboard": "لوحة الإدارة"
+  },
+  "Auth": {
+    "signIn": "تسجيل الدخول",
+    "signOut": "تسجيل الخروج",
+    "loading": "جاري التحميل..."
   }
 }
