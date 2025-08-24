@@ -22,7 +22,7 @@ export default async function AgendaPage({ params }: Props) {
     { id: 9, type: "closing", duration: "15m" }
   ];
 
-  const getItemTitle = (item: typeof agendaItems[0]) => {
+  const getItemTitle = (item: typeof agendaItems[0]): string => {
     if (item.type === 'ceremony') return t("agendaItems.opening");
     if (item.type === 'session') {
       if (item.id === 4) return t("agendaItems.session1");
