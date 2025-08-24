@@ -22,7 +22,7 @@ export function HeroSection() {
       </p>
       <div className="flex justify-center">
         <Link
-          href="#agenda"
+          href="/agenda"
           className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
         >
           {t("viewAgenda")}

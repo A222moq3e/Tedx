@@ -33,7 +33,7 @@ export default async function AgendaPage({ params }: Props) {
       if (item.id === 5) return t("agendaItems.break1");
       return t("agendaItems.break2");
     }
-    return t(`agendaItems.${item.type}` as any);
+    return t(`agendaItems.${item.type}` as "agendaItems.registration" | "agendaItems.exhibition" | "agendaItems.closing");
   };
 
   return (
@@ -119,7 +119,7 @@ export default async function AgendaPage({ params }: Props) {
                             </span>
                             {/* Time slot badge */}
                             <span className="bg-white/10 dark:bg-white/10 bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-white px-2 py-1 rounded-full">
-                              {t(`timeSlots.slot${item.id}` as any)}
+                              {t(`timeSlots.slot${item.id}` as "timeSlots.slot1" | "timeSlots.slot2" | "timeSlots.slot3" | "timeSlots.slot4" | "timeSlots.slot5" | "timeSlots.slot6" | "timeSlots.slot7" | "timeSlots.slot8" | "timeSlots.slot9")}
                             </span>
                           </div>
                         </div>
