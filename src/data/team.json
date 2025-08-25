@@ -1,0 +1,834 @@
+{
+  "departments": [
+    {
+      "name": "إدارة المشروع",
+      "nameEn": "Project Management",
+      "members": [
+        {
+          "id": 1,
+          "nameAr": "أسيل ابا الخيل",
+          "nameEn": "Aseel Abaalkhail",
+          "roleAr": "منظم الحدث",
+          "roleEn": "Head organizer",
+          "image": null,
+          "linkedin": "http://linkedin.com/in/aseelabaalkhail",
+          "hasConsent": false
+        },
+        {
+          "id": 2,
+          "nameAr": "نورة ال مقبل",
+          "nameEn": "Noura Almuqbil",
+          "roleAr": "منظم الحدث",
+          "roleEn": "Head organizer",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/noura-al-muqbil-092369312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 3,
+          "nameAr": "محمد الصيقل",
+          "nameEn": "Mohammed Alsaigal",
+          "roleAr": "منظم الحدث المشارك",
+          "roleEn": "Co-organizer",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/mohammed-alsaigal-876a4022b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 4,
+          "nameAr": "عاصم الأحمري",
+          "nameEn": "Asem Alahmari",
+          "roleAr": "منظم الحدث المشارك",
+          "roleEn": "Co-organizer",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/asem-alahmari-40355b1bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 5,
+          "nameAr": "عبدالملك بن خميس",
+          "nameEn": "Abdulmalik BinKhamis",
+          "roleAr": "مستشار المشروع",
+          "roleEn": "Advisor",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/abdulmalik-khalid-bin-khamis-22553b260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 6,
+          "nameAr": "نايف الخضر",
+          "nameEn": "Naif Alkhedr",
+          "roleAr": "مستشار المشروع",
+          "roleEn": "Advisor",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/naifalkhedr?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 7,
+          "nameAr": "نوره السلطان",
+          "nameEn": "Nora Alsultan",
+          "roleAr": "منسق المشروع",
+          "roleEn": "Project coordinator",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/nora-alsultan-763981294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 8,
+          "nameAr": "عبدالله القحطاني",
+          "nameEn": "Abdullah alqhtani",
+          "roleAr": "منسق المشروع",
+          "roleEn": "Project coordinator",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/abdullah-alqhtani-0a964433b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        }
+      ]
+    },
+    {
+      "name": "إدارة الإعلام والتسويق",
+      "nameEn": "Media and Marketing Management",
+      "members": [
+        {
+          "id": 9,
+          "nameAr": "نورة العمر",
+          "nameEn": "Noura alomar",
+          "roleAr": "رئيس إدارة الإعلام والتسويق",
+          "roleEn": "Head of Media and Marketing",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/noura-alomar?utm_source=share&utm_campaign=share_via&utm_content=pr",
+          "hasConsent": false
+        },
+        {
+          "id": 10,
+          "nameAr": "العنود الكريدا",
+          "nameEn": "Alanoud Alkraida",
+          "roleAr": "مدير قسم الإعلام",
+          "roleEn": "Manager of Media",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/alanoud-alkraida-2a87b934b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 11,
+          "nameAr": "ريما السحيمي",
+          "nameEn": "Reema Alsuhimi",
+          "roleAr": "مدير قسم التسويق",
+          "roleEn": "Manager of Marketing",
+          "image": null,
+          "linkedin": "https://sa.linkedin.com/in/reema-alsuhimi-94472621a?trk=public_post_feed-actor-name",
+          "hasConsent": false
+        },
+        {
+          "id": 12,
+          "nameAr": "روان صالح",
+          "nameEn": "Rawan Saleh",
+          "roleAr": "مسؤول التواصل الإجتماعي",
+          "roleEn": "Social Media Officer",
+          "image": null,
+          "linkedin": "http://linkedin.com/in/rawan-saleh-238043302",
+          "hasConsent": true
+        },
+        {
+          "id": 13,
+          "nameAr": "شوق العجمي",
+          "nameEn": "Shouq Alajmi",
+          "roleAr": "مسؤول المركز الإعلامي",
+          "roleEn": "Media Center Officer",
+          "image": "public/team/shouq-alajmi.jpeg",
+          "linkedin": "https://www.linkedin.com/in/shuoq-alajmi-775b622a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 14,
+          "nameAr": "أروى الحوشاني",
+          "nameEn": "Arwa Alhwshani",
+          "roleAr": "عضو المركز الإعلامي",
+          "roleEn": "Media Center Member",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/arwa-a-74709b321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 15,
+          "nameAr": "عبدالله بن عبدان",
+          "nameEn": "Abdullah bin Abdan",
+          "roleAr": "عضو المركز الإعلامي",
+          "roleEn": "Media Center Member",
+          "image": null,
+          "linkedin": null,
+          "hasConsent": true
+        },
+        {
+          "id": 16,
+          "nameAr": "ساره العبدان",
+          "nameEn": "Sarah Alabdan",
+          "roleAr": "مسؤول التصاميم",
+          "roleEn": "Design Officer",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/sarah-alabdan-702757257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 17,
+          "nameAr": "حصه العتيبي",
+          "nameEn": "Hessah Alotibi",
+          "roleAr": "عضو التصاميم",
+          "roleEn": "Design member",
+          "image": "public/team/hessah-alotibi.jpeg",
+          "linkedin": "https://www.linkedin.com/in/hessah-alotaibi-44305625b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 18,
+          "nameAr": "رهام المشهراوي",
+          "nameEn": "Reham Almashhrawi",
+          "roleAr": "عضو التصاميم",
+          "roleEn": "Design member",
+          "image": "public/team/reham-almashhrawi.jpeg",
+          "linkedin": "https://www.linkedin.com/in/reham-al-mashhrawi-1257882b5/",
+          "hasConsent": true
+        },
+        {
+          "id": 19,
+          "nameAr": "إيناس الخليفة",
+          "nameEn": "Eenas Alkhalifah",
+          "roleAr": "عضو التصاميم",
+          "roleEn": "Design member",
+          "image": "public/team/eenas-alkhalifah.jpeg",
+          "linkedin": "https://www.linkedin.com/in/eenas-alkhalifah-87a91725b/",
+          "hasConsent": true
+        },
+        {
+          "id": 20,
+          "nameAr": "مدى الجاسر",
+          "nameEn": "Mada Al-Jasser",
+          "roleAr": "عضو التصاميم",
+          "roleEn": "Design member",
+          "image": null,
+          "linkedin": null,
+          "hasConsent": true
+        },
+        {
+          "id": 21,
+          "nameAr": "تالا السحيباني",
+          "nameEn": "Tala Alsuhaibani",
+          "roleAr": "عضو التصاميم",
+          "roleEn": "Design member",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/tala-alsuhaibani-238b70321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 22,
+          "nameAr": "البتول القحطاني",
+          "nameEn": "Albatool Alqahtani",
+          "roleAr": "مسؤول المحتوى",
+          "roleEn": "Content Officer",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/albatool-alqahtani?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 23,
+          "nameAr": "سلمى الفراج",
+          "nameEn": "Salma Alfarraj",
+          "roleAr": "عضو المحتوى",
+          "roleEn": "Content Member",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/salma-alfarraj-09b6741a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 24,
+          "nameAr": "أمل مشيخي",
+          "nameEn": "Amal Mashyakhi",
+          "roleAr": "عضو المحتوى",
+          "roleEn": "Content Member",
+          "image": "public/team/amal-mashyakhi.jpeg",
+          "linkedin": "https://www.linkedin.com/in/amal-mashyakhi-22a555266/",
+          "hasConsent": true
+        },
+        {
+          "id": 25,
+          "nameAr": "فتون السيد",
+          "nameEn": "Ftoun AlSayed",
+          "roleAr": "عضو المحتوى",
+          "roleEn": "Content Member",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/ftoun-pr-1b0516340/",
+          "hasConsent": true
+        },
+        {
+          "id": 26,
+          "nameAr": "مهرة المهنا",
+          "nameEn": "Muhrah Almuhanna",
+          "roleAr": "عضو التسويق",
+          "roleEn": "Marketing member",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/muhrah-almuhanna-abalkhail-5506432a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 27,
+          "nameAr": "ليان الرزقان",
+          "nameEn": "Layan Alrzqan",
+          "roleAr": "عضو التسويق",
+          "roleEn": "Marketing member",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/layan-ibrahim-91304933b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 28,
+          "nameAr": "جنى الطريزاوي",
+          "nameEn": "Jana Altrezawi",
+          "roleAr": "عضو التسويق",
+          "roleEn": "Marketing member",
+          "image": "public/team/jana-altrezawi.jpeg",
+          "linkedin": "https://www.linkedin.com/in/jana-altrezawi-3bb371287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app&original_referer=https%3A%2F%2Fwww.google.com%2F",
+          "hasConsent": true
+        },
+        {
+          "id": 29,
+          "nameAr": "فاطمة جلهم",
+          "nameEn": "Fatimah Jalham",
+          "roleAr": "عضو التسويق",
+          "roleEn": "Marketing member",
+          "image": "public/team/fatimah-jalham.jpeg",
+          "linkedin": "https://www.linkedin.com/in/fatimah-alqhtani-885b20315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        }
+      ]
+    },
+    {
+      "name": "إدارة العلاقات العامة",
+      "nameEn": "Public Relations Management",
+      "members": [
+        {
+          "id": 30,
+          "nameAr": "لورا المحيسن",
+          "nameEn": "Lora AlMohaisen",
+          "roleAr": "رئيس إدارة العلاقات العامة",
+          "roleEn": "Head of Public Relations",
+          "image": "public/team/lora-almohaisen.jpeg",
+          "linkedin": "https://www.linkedin.com/in/lora-n-almohaisen-658a6922b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 31,
+          "nameAr": "رغـد الخزيـم",
+          "nameEn": "Raghad Alkhazayem",
+          "roleAr": "نائب رئيس إدارة العلاقات العامة",
+          "roleEn": "VP of Public Relations",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/raghad-alkhazayem-012b2b2a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 32,
+          "nameAr": "هيله التويجري",
+          "nameEn": "Heilah Altuwaijri",
+          "roleAr": "عضو الشراكات",
+          "roleEn": "Member of partnership",
+          "image": "public/team/heilah-altuwaijri.jpeg",
+          "linkedin": null,
+          "hasConsent": true
+        },
+        {
+          "id": 33,
+          "nameAr": "روان الركابي",
+          "nameEn": "Rawan Alrkaby",
+          "roleAr": "عضو الشراكات",
+          "roleEn": "Member of partnership",
+          "image": "public/team/rawan-alrkaby.jpeg",
+          "linkedin": "https://www.linkedin.com/in/rawan-alrkaby-031099316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 34,
+          "nameAr": "رنيم العتيبي",
+          "nameEn": "Raneem Al-Otaibi",
+          "roleAr": "عضو الشراكات",
+          "roleEn": "Member of partnership",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/raneemalotaibi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 35,
+          "nameAr": "سعد الراجح",
+          "nameEn": "saed alraajih",
+          "roleAr": "عضو الشراكات",
+          "roleEn": "Member of partnership",
+          "image": "public/team/saed-alraajih.jpeg",
+          "linkedin": null,
+          "hasConsent": true
+        },
+        {
+          "id": 36,
+          "nameAr": "ريما العمر",
+          "nameEn": "Reema Alomar",
+          "roleAr": "عضو الشراكات",
+          "roleEn": "Member of partnership",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/reema-alomar-96412b305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 37,
+          "nameAr": "سديم آل مقبل",
+          "nameEn": "Sadeem Almuqbel",
+          "roleAr": "مسؤول المتحدثين",
+          "roleEn": "Speakers Officer",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/sadeem-almuqbel-7b1651255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 38,
+          "nameAr": "ليان اليوسف",
+          "nameEn": "Layan alyousef",
+          "roleAr": "عضو المتحدثين",
+          "roleEn": "Member of speakers",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/layan-al-yousef-67b0a7293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 39,
+          "nameAr": "ربا الطليعه",
+          "nameEn": "Ruba Altleah",
+          "roleAr": "عضو المتحدثين",
+          "roleEn": "Member of speakers",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/ruba-altleah-b43b03320/",
+          "hasConsent": true
+        },
+        {
+          "id": 40,
+          "nameAr": "حصة الفوزان",
+          "nameEn": "Hessah AlFawzan",
+          "roleAr": "عضو المتحدثين",
+          "roleEn": "Member of speakers",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/hessa-alfawzan-12b393264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app&original_referer=https%3A%2F%2Fwww.google.com%2F",
+          "hasConsent": false
+        },
+        {
+          "id": 41,
+          "nameAr": "الضاري العريني",
+          "nameEn": "AlDHARI ALORINI",
+          "roleAr": "مسؤول البروتوكول",
+          "roleEn": "Protocols officer",
+          "image": "public/team/aldhari-alorini.jpeg",
+          "linkedin": "https://www.linkedin.com/in/aldhari-alorini-1836b0295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 42,
+          "nameAr": "ريم بامجبور",
+          "nameEn": "Reem Bamajboor",
+          "roleAr": "عضو البروتوكول",
+          "roleEn": "Member of protocols",
+          "image": "public/team/reem-bamajboor.jpeg",
+          "linkedin": "https://www.linkedin.com/in/reem-mohammed-b9abbb332/",
+          "hasConsent": true
+        },
+        {
+          "id": 43,
+          "nameAr": "محمد العثمان",
+          "nameEn": "Mohammed Alothman",
+          "roleAr": "عضو البروتوكول",
+          "roleEn": "Member of protocols",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/mohammed-alothman-39083329b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 44,
+          "nameAr": "عايض بن سالم",
+          "nameEn": "Ayidh bin Salem",
+          "roleAr": "عضو البروتوكول",
+          "roleEn": "Member of protocols",
+          "image": "public/team/ayidh-bin-salem.jpeg",
+          "linkedin": null,
+          "hasConsent": true
+        }
+      ]
+    },
+    {
+      "name": "إدارة التجربة",
+      "nameEn": "Experience Management",
+      "members": [
+        {
+          "id": 45,
+          "nameAr": "محمد الجاسر",
+          "nameEn": "mohammad aljasir",
+          "roleAr": "رئيس إدارة التجربة",
+          "roleEn": "Head of Experience",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/mohammad-aljasir-929254340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 46,
+          "nameAr": "ريما السليمان",
+          "nameEn": "Reema Alsulaiman",
+          "roleAr": "",
+          "roleEn": "VP of Guest Experience",
+          "image": "public/team/reema-alsulaiman.jpeg",
+          "linkedin": null,
+          "hasConsent": true
+        },
+        {
+          "id": 47,
+          "nameAr": "فيصل الفلاج",
+          "nameEn": "Faisal AL-fallaj",
+          "roleAr": "",
+          "roleEn": "VP of Execution",
+          "image": null,
+          "linkedin": null,
+          "hasConsent": false
+        },
+        {
+          "id": 48,
+          "nameAr": "عبدالملك المقبل",
+          "nameEn": "ABDULMALIK ALMUQBIL",
+          "roleAr": "",
+          "roleEn": "Tedx Hub Officer",
+          "image": null,
+          "linkedin": null,
+          "hasConsent": false
+        },
+        {
+          "id": 49,
+          "nameAr": "ريما العمر",
+          "nameEn": "Reema Alomar",
+          "roleAr": "",
+          "roleEn": "Member of Tedx Hub",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/reema-alomar-96412b305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 50,
+          "nameAr": "راشد الحويفي",
+          "nameEn": "RASHED ALHWAIFI",
+          "roleAr": "",
+          "roleEn": "Member of Tedx Hub",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/rashed-alharbi-421b71293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 51,
+          "nameAr": "نوّاف الحقباني",
+          "nameEn": "Nawaf Alhagbani",
+          "roleAr": "",
+          "roleEn": "Internal Area Officer",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/nawaf-alhagbani-894642305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 52,
+          "nameAr": "نجود الذياب",
+          "nameEn": "Njoud Altheyab",
+          "roleAr": "",
+          "roleEn": "Member of Internal Area",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/njoud-a-341a36327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 53,
+          "nameAr": "ديمه الزامل",
+          "nameEn": "Deemah Alzamil",
+          "roleAr": "",
+          "roleEn": "Member of Internal Area",
+          "image": null,
+          "linkedin": "https://sa.linkedin.com/in/deemah-alzamil-8b332724b",
+          "hasConsent": true
+        },
+        {
+          "id": 54,
+          "nameAr": "عبدالرحمن باوزير",
+          "nameEn": "Abdulrahman bawazeer",
+          "roleAr": "",
+          "roleEn": "Member of Internal Area",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/abdulrahman-bawazeer",
+          "hasConsent": false
+        },
+        {
+          "id": 55,
+          "nameAr": "ليان السماعيل",
+          "nameEn": "Layan Alismail",
+          "roleAr": "",
+          "roleEn": "Logistics Officer",
+          "image": "public/team/layan-alismail.jpeg",
+          "linkedin": null,
+          "hasConsent": true
+        },
+        {
+          "id": 56,
+          "nameAr": "مُهند الحربي",
+          "nameEn": "Muhannad Al-harbi",
+          "roleAr": "",
+          "roleEn": "Member of Logistics",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/muhannad-alharbi-56b888347?trk=contact-info",
+          "hasConsent": false
+        },
+        {
+          "id": 57,
+          "nameAr": "نهال العتيبي",
+          "nameEn": "Nehal Alotibi",
+          "roleAr": "",
+          "roleEn": "Member of Logistics",
+          "image": null,
+          "linkedin": "http://linkedin.com/in/nehal-alotibi-12319b291",
+          "hasConsent": true
+        },
+        {
+          "id": 58,
+          "nameAr": "لوجين سلامه",
+          "nameEn": "Lujin Salamah",
+          "roleAr": "",
+          "roleEn": "External Area Officer",
+          "image": "public/team/lujin-salamah.jpeg",
+          "linkedin": null,
+          "hasConsent": true
+        },
+        {
+          "id": 59,
+          "nameAr": "أمزان الغامدي",
+          "nameEn": "Amzan Alghamdi",
+          "roleAr": "",
+          "roleEn": "Member of External Area",
+          "image": "public/team/amzan-alghamdi.jpeg",
+          "linkedin": null,
+          "hasConsent": true
+        },
+        {
+          "id": 60,
+          "nameAr": "عبدالعزيز العنزي",
+          "nameEn": "Abdulaziz alenzi",
+          "roleAr": "",
+          "roleEn": "Stage Officer",
+          "image": "public/team/abdulaziz-alenzi.jpeg",
+          "linkedin": "https://www.linkedin.com/in/abdulaziz-alenzi-630a35312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 61,
+          "nameAr": "عبدالهادي الحامد",
+          "nameEn": "ABDULHADI ALHAMED",
+          "roleAr": "",
+          "roleEn": "Member of Stage",
+          "image": "public/team/abdulhadi-alhamed.jpeg",
+          "linkedin": "https://www.linkedin.com/in/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%87%D8%A7%D9%84%D9%87%D8%A7%D8%AF%D9%8A-%D8%A7%D9%84%D8%AD%D8%A7%D9%85%D8%AF-89a33228a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 62,
+          "nameAr": "عبدالرحمن المطوع",
+          "nameEn": "Abdulrahman Almutawa",
+          "roleAr": "",
+          "roleEn": "Member of Stage",
+          "image": "public/team/abdulrahman-almutawa.jpeg",
+          "linkedin": null,
+          "hasConsent": true
+        },
+        {
+          "id": 63,
+          "nameAr": "يارا بدر",
+          "nameEn": "Yara Bader",
+          "roleAr": "",
+          "roleEn": "Organizing Officer",
+          "image": "public/team/yara-bader.jpeg",
+          "linkedin": "https://www.linkedin.com/in/yara-al-wehaibi-18189b2ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 64,
+          "nameAr": "ريماز العمري",
+          "nameEn": "Remaz Alamri",
+          "roleAr": "",
+          "roleEn": "Member of Organizing",
+          "image": "public/team/remaz-alamri.jpeg",
+          "linkedin": null,
+          "hasConsent": true
+        },
+        {
+          "id": 65,
+          "nameAr": "وجدان راشد",
+          "nameEn": "wejdan Rashed",
+          "roleAr": "",
+          "roleEn": "Member of Organizing",
+          "image": null,
+          "linkedin": null,
+          "hasConsent": false
+        }
+      ]
+    },
+    {
+      "name": "إدارة الخدمات المشتركة",
+      "nameEn": "Shared Services Management",
+      "members": [
+        {
+          "id": 66,
+          "nameAr": "غلا الثميري",
+          "nameEn": "Ghala Althumairy",
+          "roleAr": "رئيس إدارة الخدمات المشتركة",
+          "roleEn": "head of Shared services",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/ghala-althumayri-2268b7286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 67,
+          "nameAr": "عبدالعزيز السليماني",
+          "nameEn": "Abdulaziz Alsulimani",
+          "roleAr": "مسؤول القانونية",
+          "roleEn": "legal manager",
+          "image": null,
+          "linkedin": null,
+          "hasConsent": false
+        },
+        {
+          "id": 68,
+          "nameAr": "سيف العتيبي",
+          "nameEn": "Saif alotaibie",
+          "roleAr": "مسؤول الموقع الإلكتروني",
+          "roleEn": "website manager",
+          "image": null,
+          "linkedin": "http://linkedin.com/in/saif-alotaibie-2169a72bb",
+          "hasConsent": false
+        },
+        {
+          "id": 69,
+          "nameAr": "شوق السماري",
+          "nameEn": "Shoq Alsemari",
+          "roleAr": "عضو الموقع الإلكتروني",
+          "roleEn": "Member of website",
+          "image": "public/team/shoq-alsemari.jpeg",
+          "linkedin": "http://linkedin.com/in/shoqalsemari",
+          "hasConsent": true
+        },
+        {
+          "id": 70,
+          "nameAr": "عبدالله بن عمار",
+          "nameEn": "Abdullah Bin Ammar",
+          "roleAr": "عضو الموقع الإلكتروني",
+          "roleEn": "Member of website",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/a222web",
+          "hasConsent": false
+        },
+        {
+          "id": 71,
+          "nameAr": "عبدالعزيز بن عسكر",
+          "nameEn": "Abdulaziz BinAskar",
+          "roleAr": "عضو الموقع الإلكتروني",
+          "roleEn": "Member of website",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/af-askar/",
+          "hasConsent": true
+        },
+        {
+          "id": 72,
+          "nameAr": "فيصل الخريف",
+          "nameEn": "Faisal Alkhrayef",
+          "roleAr": "عضو الموقع الإلكتروني",
+          "roleEn": "Member of website",
+          "image": "public/team/faisal-alkhrayef.jpeg",
+          "linkedin": "https://www.linkedin.com/in/fkhrayef/",
+          "hasConsent": true
+        },
+        {
+          "id": 73,
+          "nameAr": "عبدالعزيز الكثيري",
+          "nameEn": "Abdulaziz Alkathiri",
+          "roleAr": "عضو الموقع الإلكتروني",
+          "roleEn": "Member of website",
+          "image": "public/team/abdulaziz-alkathiri.jpeg",
+          "linkedin": "https://www.linkedin.com/in/abdulazizalkathiri/",
+          "hasConsent": true
+        },
+        {
+          "id": 74,
+          "nameAr": "ياسر الشريف",
+          "nameEn": "Yaser AlShareef",
+          "roleAr": "عضو الموقع الإلكتروني",
+          "roleEn": "Member of website",
+          "image": null,
+          "linkedin": "http://www.linkedin.com/in/yaser-alshareef-182161375",
+          "hasConsent": false
+        },
+        {
+          "id": 75,
+          "nameAr": "غلا الثميري",
+          "nameEn": "Ghala Althumairy",
+          "roleAr": "مسؤول الميزانية",
+          "roleEn": "budgeting manager",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/ghala-althumayri-2268b7286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": false
+        },
+        {
+          "id": 76,
+          "nameAr": "مشاري المحمود",
+          "nameEn": "Mshari Al-mahmood",
+          "roleAr": "نائب مسؤول الميزانية",
+          "roleEn": "VP of budgeting",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/mshari-almahmood?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 77,
+          "nameAr": "عبدالله الزاحم",
+          "nameEn": "Abdullah Alzahem",
+          "roleAr": "عضو الميزانية",
+          "roleEn": "Member of budgeting",
+          "image": null,
+          "linkedin": "http://linkedin.com/in/abdullah-alzahem-0aa40429b",
+          "hasConsent": true
+        },
+        {
+          "id": 78,
+          "nameAr": "أروى البابطين",
+          "nameEn": "Arwa Albabtain",
+          "roleAr": "عضو الميزانية",
+          "roleEn": "Member of budgeting",
+          "image": null,
+          "linkedin": "https://www.linkedin.com/in/arwa66?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "hasConsent": true
+        },
+        {
+          "id": 79,
+          "nameAr": "بسمه الزهراني",
+          "nameEn": "Basma Alzhrani",
+          "roleAr": "عضو الميزانية",
+          "roleEn": "Member of budgeting",
+          "image": null,
+          "linkedin": "http://linkedin.com/in/basma-alzhrani-006241289",
+          "hasConsent": true
+        },
+        {
+          "id": 80,
+          "nameAr": "سعود الحمودي",
+          "nameEn": "Saud Al-Hamoudi",
+          "roleAr": "عضو الميزانية",
+          "roleEn": "Member of budgeting",
+          "image": null,
+          "linkedin": "http://linkedin.com/in/saud-al-hamoudi-cme-1-b05bb731b",
+          "hasConsent": true
+        }
+      ]
+    }
+  ]
+}

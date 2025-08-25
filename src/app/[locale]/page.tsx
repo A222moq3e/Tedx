@@ -5,7 +5,6 @@ import { HeroSection } from "~/components/HeroSection";
 import { FeaturesGrid } from "~/components/FeaturesGrid";
 import { MapSection } from "~/components/MapSection";
 import { EventDetails } from "~/components/EventDetails";
-import { TeamSection } from "~/components/TeamSection";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -30,9 +29,6 @@ function HomeContent() {
 
       {/* Map Section */}
       <MapSection />
-
-      {/* Team Section */}
-      <TeamSection />
 
       {/* Call to Action */}
       <div
