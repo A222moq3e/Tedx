@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { Calendar, Clock, MapPin } from "lucide-react";
-
+import DownloadIcsButton from "~/components/download-Ics-Button";
 export function EventDetails() {
   const t = useTranslations("HomePage");
   const locale = useLocale();
@@ -20,6 +20,7 @@ export function EventDetails() {
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
             {t("eventDetailsTitle")}
           </h2>
+      <DownloadIcsButton />
         </div>
 
         {/* Event Details Cards */}
