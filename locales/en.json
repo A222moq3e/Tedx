@@ -162,5 +162,32 @@
     "signIn": "Sign In",
     "signOut": "Sign Out",
     "loading": "Loading..."
+  },
+  "Agenda": {
+    "title": "Agenda",
+    "heroTitle": "Beyond The Moment",
+    "heroSubtitle": "ما بعد اللحظة",
+    "agendaItems": {
+      "registration": "Registration and Cognitive Communication",
+      "exhibition": "Opening of the \"Beyond The Moment\" Exhibition",
+      "opening": "Opening Ceremony",
+      "session1": "First Session for Inspiration (Stories and Experiences)",
+      "break1": "Break and Networking",
+      "session2": "Second Session for Inspiration (Stories and Experiences)",
+      "break2": "Break and Networking",
+      "session3": "Third Session for Inspiration (Stories and Experiences)",
+      "closing": "Conclusion of the Meeting"
+    },
+    "timeSlots": {
+      "slot1": "3:00 - 4:30 PM",
+      "slot2": "4:30 - 5:00 PM",
+      "slot3": "5:00 - 5:50 PM",
+      "slot4": "5:50 - 6:50 PM",
+      "slot5": "6:50 - 7:20 PM",
+      "slot6": "7:20 - 8:45 PM",
+      "slot7": "8:45 - 9:00 PM",
+      "slot8": "9:00 - 10:00 PM",
+      "slot9": "10:00 - 10:15 PM"
+    }
   }
 }
