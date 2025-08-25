@@ -39,7 +39,7 @@ export const GET = async (req: NextRequest) => {
     return new Response("Failed to generate calendar", { status: 500 });
   }
 
-  return new Response(value as string, {
+  return new Response(value, {
     headers: {
       "Content-Type": "text/calendar; charset=utf-8",
       "Content-Disposition": "inline; filename=events.ics",
