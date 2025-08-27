@@ -23,7 +23,7 @@ export function TeamSection() {
         {teamData.departments.map((department) => (
           <div key={department.nameEn} className="space-y-8">
             {/* Department Header */}
-            <div className="px-4 text-center">
+            <div className="px-6 text-center sm:px-4">
               <button
                 onClick={() => {
                   setHasUserInteracted(true);
@@ -37,12 +37,18 @@ export function TeamSection() {
                 }}
                 className="group flex w-full cursor-pointer items-center justify-center transition-colors"
               >
-                <div className="mx-auto max-w-xs text-center">
-                  <h3 className="group-hover:text-primary dark:group-hover:text-primary mb-2 text-xl font-bold text-gray-800 transition-colors sm:text-2xl dark:text-white">
-                    {locale === "ar" ? department.name : department.nameEn}
+                <div className="mx-auto w-full max-w-[280px] text-center sm:max-w-xs">
+                  <h3 className="group-hover:text-primary dark:group-hover:text-primary mb-2 text-lg leading-tight font-bold text-gray-800 transition-colors sm:text-xl lg:text-2xl dark:text-white">
+                    {locale === "ar" ? (
+                      department.name
+                    ) : (
+                      <span style={{ whiteSpace: "pre-line" }}>
+                        {department.nameEn}
+                      </span>
+                    )}
                   </h3>
                   <div
-                    className={`group-hover:bg-primary dark:group-hover:bg-primary mx-auto h-1 w-24 rounded-full transition-all duration-300 ${
+                    className={`group-hover:bg-primary dark:group-hover:bg-primary mx-auto h-1 w-20 rounded-full transition-all duration-300 sm:w-24 ${
                       expandedDepartments.has(department.nameEn)
                         ? "bg-primary"
                         : "bg-gray-400 dark:bg-gray-500"
@@ -54,11 +60,11 @@ export function TeamSection() {
 
             {/* Team Members Grid */}
             {expandedDepartments.has(department.nameEn) && (
-              <div className="animate-in slide-in-from-top-2 grid grid-cols-2 gap-4 duration-300 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
+              <div className="animate-in slide-in-from-top-2 grid grid-cols-2 gap-3 px-4 duration-300 sm:gap-4 sm:px-0 lg:grid-cols-4 lg:gap-8">
                 {department.members.map((member) => (
                   <div
                     key={member.id}
-                    className={`group relative flex h-56 flex-col rounded-2xl border border-gray-200 bg-white/90 p-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl sm:h-72 sm:p-6 lg:h-80 dark:border-gray-700 dark:bg-gray-800/90 ${isArabic ? "text-right" : "text-left"}`}
+                    className={`group relative flex min-h-[280px] flex-col rounded-lg border border-gray-200 bg-white/90 p-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl sm:min-h-[300px] sm:p-6 lg:min-h-[320px] dark:border-gray-700 dark:bg-gray-800/90 ${isArabic ? "text-right" : "text-left"}`}
                   >
                     {/* Member Image */}
                     <div className="mb-3 flex-shrink-0 sm:mb-6">
@@ -82,13 +88,39 @@ export function TeamSection() {
                       </div>
                     </div>
 
-                    {/* Member Info - Takes remaining space */}
+                    {/* Member Info - Reduced spacing for better UI */}
                     <div className="flex flex-1 flex-col text-center">
-                      <h3 className="mb-2 h-12 text-lg font-bold text-gray-900 sm:text-xl dark:text-white">
-                        {locale === "ar" ? member.nameAr : member.nameEn}
+                      <h3 className="mb-2 flex h-16 items-center justify-center text-lg font-bold text-gray-900 sm:text-xl dark:text-white">
+                        {locale === "ar" ? (
+                          member.nameAr
+                        ) : (
+                          <>
+                            {member.nameEn.split(" ")[0]}
+                            <br />
+                            {member.nameEn.split(" ").slice(1).join(" ") || " "}
+                          </>
+                        )}
                       </h3>
-                      <p className="mb-3 h-16 flex-1 text-sm text-gray-600 sm:mb-4 sm:text-base dark:text-gray-300">
-                        {locale === "ar" ? member.roleAr : member.roleEn}
+                      <p className="mb-1 flex h-16 items-center justify-center text-sm text-gray-600 sm:mb-2 sm:text-base dark:text-gray-300">
+                        {locale === "ar" ? (
+                          member.roleAr
+                        ) : (
+                          <>
+                            {member.roleEn.includes(" of ") ? (
+                              <>
+                                {member.roleEn.split(" of ")[0]} of
+                                <br />
+                                {member.roleEn.split(" of ")[1]}
+                              </>
+                            ) : (
+                              <>
+                                {member.roleEn}
+                                <br />
+                                &nbsp;
+                              </>
+                            )}
+                          </>
+                        )}
                       </p>
 
                       {/* LinkedIn Button - Always at bottom */}

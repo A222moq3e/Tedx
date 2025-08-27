@@ -80,7 +80,7 @@
           "nameEn": "Abdullah alqhtani",
           "roleAr": "منسق المشروع",
           "roleEn": "Project coordinator",
-          "image": null,
+          "image": "/team/abdullah-alqhtani.jpeg",
           "linkedin": "https://www.linkedin.com/in/abdullah-alqhtani-0a964433b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         }
@@ -88,7 +88,7 @@
     },
     {
       "name": "إدارة الإعلام والتسويق",
-      "nameEn": "Media and Marketing Management",
+      "nameEn": "Media and Marketing\nManagement",
       "members": [
         {
           "id": 9,
@@ -176,7 +176,7 @@
           "nameEn": "Hessah Alotibi",
           "roleAr": "عضو التصاميم",
           "roleEn": "Design member",
-          "image": "/team/hessah-alotibi.jpeg",
+          "image": null,
           "linkedin": "https://www.linkedin.com/in/hessah-alotaibi-44305625b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -186,7 +186,7 @@
           "nameEn": "Reham Almashhrawi",
           "roleAr": "عضو التصاميم",
           "roleEn": "Design member",
-          "image": "/team/reham-almashhrawi.jpeg",
+          "image": null,
           "linkedin": "https://www.linkedin.com/in/reham-al-mashhrawi-1257882b5/",
           "hasConsent": true
         },
@@ -196,7 +196,7 @@
           "nameEn": "Eenas Alkhalifah",
           "roleAr": "عضو التصاميم",
           "roleEn": "Design member",
-          "image": "/team/eenas-alkhalifah.jpeg",
+          "image": "/team/eenas-alkhalifah.png",
           "linkedin": "https://www.linkedin.com/in/eenas-alkhalifah-87a91725b/",
           "hasConsent": true
         },
@@ -246,7 +246,7 @@
           "nameEn": "Amal Mashyakhi",
           "roleAr": "عضو المحتوى",
           "roleEn": "Content Member",
-          "image": "/team/amal-mashyakhi.jpeg",
+          "image": null,
           "linkedin": "https://www.linkedin.com/in/amal-mashyakhi-22a555266/",
           "hasConsent": true
         },
@@ -286,7 +286,7 @@
           "nameEn": "Jana Altrezawi",
           "roleAr": "عضو التسويق",
           "roleEn": "Marketing member",
-          "image": "/team/jana-altrezawi.jpeg",
+          "image": null,
           "linkedin": "https://www.linkedin.com/in/jana-altrezawi-3bb371287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app&original_referer=https%3A%2F%2Fwww.google.com%2F",
           "hasConsent": true
         },
@@ -304,7 +304,7 @@
     },
     {
       "name": "إدارة العلاقات العامة",
-      "nameEn": "Public Relations Management",
+      "nameEn": "Public Relations\nManagement",
       "members": [
         {
           "id": 30,
@@ -312,7 +312,7 @@
           "nameEn": "Lora AlMohaisen",
           "roleAr": "رئيس إدارة العلاقات العامة",
           "roleEn": "Head of Public Relations",
-          "image": "/team/lora-almohaisen.jpeg",
+          "image": "/team/lora-almohaisen.jpg",
           "linkedin": "https://www.linkedin.com/in/lora-n-almohaisen-658a6922b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -332,7 +332,7 @@
           "nameEn": "Heilah Altuwaijri",
           "roleAr": "عضو الشراكات",
           "roleEn": "Member of partnership",
-          "image": "/team/heilah-altuwaijri.jpeg",
+          "image": null,
           "linkedin": null,
           "hasConsent": true
         },
@@ -342,7 +342,7 @@
           "nameEn": "Rawan Alrkaby",
           "roleAr": "عضو الشراكات",
           "roleEn": "Member of partnership",
-          "image": "/team/rawan-alrkaby.jpeg",
+          "image": null,
           "linkedin": "https://www.linkedin.com/in/rawan-alrkaby-031099316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -362,7 +362,7 @@
           "nameEn": "saed alraajih",
           "roleAr": "عضو الشراكات",
           "roleEn": "Member of partnership",
-          "image": "/team/saed-alraajih.jpeg",
+          "image": null,
           "linkedin": null,
           "hasConsent": true
         },
@@ -432,7 +432,7 @@
           "nameEn": "Reem Bamajboor",
           "roleAr": "عضو البروتوكول",
           "roleEn": "Member of protocols",
-          "image": "/team/reem-bamajboor.jpeg",
+          "image": null,
           "linkedin": "https://www.linkedin.com/in/reem-mohammed-b9abbb332/",
           "hasConsent": true
         },
@@ -452,7 +452,7 @@
           "nameEn": "Ayidh bin Salem",
           "roleAr": "عضو البروتوكول",
           "roleEn": "Member of protocols",
-          "image": "/team/ayidh-bin-salem.jpeg",
+          "image": null,
           "linkedin": null,
           "hasConsent": true
         }
@@ -478,7 +478,7 @@
           "nameEn": "Reema Alsulaiman",
           "roleAr": "",
           "roleEn": "VP of Guest Experience",
-          "image": "/team/reema-alsulaiman.jpeg",
+          "image": null,
           "linkedin": null,
           "hasConsent": true
         },
@@ -519,7 +519,7 @@
           "roleAr": "",
           "roleEn": "Member of Tedx Hub",
           "image": null,
-          "linkedin": "https://www.linkedin.com/in/rashed-alharbi-421b71293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "linkedin": null,
           "hasConsent": false
         },
         {
@@ -539,7 +539,7 @@
           "roleAr": "",
           "roleEn": "Member of Internal Area",
           "image": null,
-          "linkedin": "https://www.linkedin.com/in/njoud-a-341a36327?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "linkedin": null,
           "hasConsent": true
         },
         {
@@ -568,7 +568,7 @@
           "nameEn": "Layan Alismail",
           "roleAr": "",
           "roleEn": "Logistics Officer",
-          "image": "/team/layan-alismail.jpeg",
+          "image": null,
           "linkedin": null,
           "hasConsent": true
         },
@@ -598,7 +598,7 @@
           "nameEn": "Lujin Salamah",
           "roleAr": "",
           "roleEn": "External Area Officer",
-          "image": "/team/lujin-salamah.jpeg",
+          "image": null,
           "linkedin": null,
           "hasConsent": true
         },
@@ -608,7 +608,7 @@
           "nameEn": "Amzan Alghamdi",
           "roleAr": "",
           "roleEn": "Member of External Area",
-          "image": "/team/amzan-alghamdi.jpeg",
+          "image": null,
           "linkedin": null,
           "hasConsent": true
         },
@@ -628,8 +628,8 @@
           "nameEn": "ABDULHADI ALHAMED",
           "roleAr": "",
           "roleEn": "Member of Stage",
-          "image": "/team/abdulhadi-alhamed.jpeg",
-          "linkedin": "https://www.linkedin.com/in/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%87%D8%A7%D9%84%D9%87%D8%A7%D8%AF%D9%8A-%D8%A7%D9%84%D8%AD%D8%A7%D9%85%D8%AF-89a33228a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "image": "/team/abdulhadi-alhamed.jpg",
+          "linkedin": null,
           "hasConsent": true
         },
         {
@@ -648,7 +648,7 @@
           "nameEn": "Yara Bader",
           "roleAr": "",
           "roleEn": "Organizing Officer",
-          "image": "/team/yara-bader.jpeg",
+          "image": "/team/yara-bader.jpg",
           "linkedin": "https://www.linkedin.com/in/yara-al-wehaibi-18189b2ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -676,7 +676,7 @@
     },
     {
       "name": "إدارة الخدمات المشتركة",
-      "nameEn": "Shared Services Management",
+      "nameEn": "Shared Services\nManagement",
       "members": [
         {
           "id": 66,
@@ -744,7 +744,7 @@
           "nameEn": "Faisal Alkhrayef",
           "roleAr": "عضو الموقع الإلكتروني",
           "roleEn": "Member of website",
-          "image": "/team/faisal-alkhrayef.jpeg",
+          "image": "/team/faisal-alkhrayef.png",
           "linkedin": "https://www.linkedin.com/in/fkhrayef/",
           "hasConsent": true
         },
@@ -794,7 +794,7 @@
           "nameEn": "Abdullah Alzahem",
           "roleAr": "عضو الميزانية",
           "roleEn": "Member of budgeting",
-          "image": null,
+          "image": "/team/abdullah-alzahem.jpg",
           "linkedin": "http://linkedin.com/in/abdullah-alzahem-0aa40429b",
           "hasConsent": true
         },
@@ -824,7 +824,7 @@
           "nameEn": "Saud Al-Hamoudi",
           "roleAr": "عضو الميزانية",
           "roleEn": "Member of budgeting",
-          "image": null,
+          "image": "/team/saud-al-hamoudi.jpeg",
           "linkedin": "http://linkedin.com/in/saud-al-hamoudi-cme-1-b05bb731b",
           "hasConsent": true
         }
