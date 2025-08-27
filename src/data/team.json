@@ -97,7 +97,7 @@
           "roleAr": "رئيس إدارة الإعلام والتسويق",
           "roleEn": "Head of Media and Marketing",
           "image": null,
-          "linkedin": "https://www.linkedin.com/in/noura-alomar?utm_source=share&utm_campaign=share_via&utm_content=pr",
+          "linkedin": "https://www.linkedin.com/in/noura-alomar",
           "hasConsent": false
         },
         {
@@ -136,7 +136,7 @@
           "nameEn": "Shouq Alajmi",
           "roleAr": "مسؤول المركز الإعلامي",
           "roleEn": "Media Center Officer",
-          "image": "public/team/shouq-alajmi.jpeg",
+          "image": "/team/shouq-alajmi.jpeg",
           "linkedin": "https://www.linkedin.com/in/shuoq-alajmi-775b622a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -176,7 +176,7 @@
           "nameEn": "Hessah Alotibi",
           "roleAr": "عضو التصاميم",
           "roleEn": "Design member",
-          "image": "public/team/hessah-alotibi.jpeg",
+          "image": "/team/hessah-alotibi.jpeg",
           "linkedin": "https://www.linkedin.com/in/hessah-alotaibi-44305625b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -186,7 +186,7 @@
           "nameEn": "Reham Almashhrawi",
           "roleAr": "عضو التصاميم",
           "roleEn": "Design member",
-          "image": "public/team/reham-almashhrawi.jpeg",
+          "image": "/team/reham-almashhrawi.jpeg",
           "linkedin": "https://www.linkedin.com/in/reham-al-mashhrawi-1257882b5/",
           "hasConsent": true
         },
@@ -196,7 +196,7 @@
           "nameEn": "Eenas Alkhalifah",
           "roleAr": "عضو التصاميم",
           "roleEn": "Design member",
-          "image": "public/team/eenas-alkhalifah.jpeg",
+          "image": "/team/eenas-alkhalifah.jpeg",
           "linkedin": "https://www.linkedin.com/in/eenas-alkhalifah-87a91725b/",
           "hasConsent": true
         },
@@ -246,7 +246,7 @@
           "nameEn": "Amal Mashyakhi",
           "roleAr": "عضو المحتوى",
           "roleEn": "Content Member",
-          "image": "public/team/amal-mashyakhi.jpeg",
+          "image": "/team/amal-mashyakhi.jpeg",
           "linkedin": "https://www.linkedin.com/in/amal-mashyakhi-22a555266/",
           "hasConsent": true
         },
@@ -286,7 +286,7 @@
           "nameEn": "Jana Altrezawi",
           "roleAr": "عضو التسويق",
           "roleEn": "Marketing member",
-          "image": "public/team/jana-altrezawi.jpeg",
+          "image": "/team/jana-altrezawi.jpeg",
           "linkedin": "https://www.linkedin.com/in/jana-altrezawi-3bb371287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app&original_referer=https%3A%2F%2Fwww.google.com%2F",
           "hasConsent": true
         },
@@ -296,7 +296,7 @@
           "nameEn": "Fatimah Jalham",
           "roleAr": "عضو التسويق",
           "roleEn": "Marketing member",
-          "image": "public/team/fatimah-jalham.jpeg",
+          "image": "/team/fatimah-jalham.jpeg",
           "linkedin": "https://www.linkedin.com/in/fatimah-alqhtani-885b20315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         }
@@ -312,7 +312,7 @@
           "nameEn": "Lora AlMohaisen",
           "roleAr": "رئيس إدارة العلاقات العامة",
           "roleEn": "Head of Public Relations",
-          "image": "public/team/lora-almohaisen.jpeg",
+          "image": "/team/lora-almohaisen.jpeg",
           "linkedin": "https://www.linkedin.com/in/lora-n-almohaisen-658a6922b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -332,7 +332,7 @@
           "nameEn": "Heilah Altuwaijri",
           "roleAr": "عضو الشراكات",
           "roleEn": "Member of partnership",
-          "image": "public/team/heilah-altuwaijri.jpeg",
+          "image": "/team/heilah-altuwaijri.jpeg",
           "linkedin": null,
           "hasConsent": true
         },
@@ -342,7 +342,7 @@
           "nameEn": "Rawan Alrkaby",
           "roleAr": "عضو الشراكات",
           "roleEn": "Member of partnership",
-          "image": "public/team/rawan-alrkaby.jpeg",
+          "image": "/team/rawan-alrkaby.jpeg",
           "linkedin": "https://www.linkedin.com/in/rawan-alrkaby-031099316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -362,7 +362,7 @@
           "nameEn": "saed alraajih",
           "roleAr": "عضو الشراكات",
           "roleEn": "Member of partnership",
-          "image": "public/team/saed-alraajih.jpeg",
+          "image": "/team/saed-alraajih.jpeg",
           "linkedin": null,
           "hasConsent": true
         },
@@ -422,7 +422,7 @@
           "nameEn": "AlDHARI ALORINI",
           "roleAr": "مسؤول البروتوكول",
           "roleEn": "Protocols officer",
-          "image": "public/team/aldhari-alorini.jpeg",
+          "image": "/team/aldhari-alorini.jpeg",
           "linkedin": "https://www.linkedin.com/in/aldhari-alorini-1836b0295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -432,7 +432,7 @@
           "nameEn": "Reem Bamajboor",
           "roleAr": "عضو البروتوكول",
           "roleEn": "Member of protocols",
-          "image": "public/team/reem-bamajboor.jpeg",
+          "image": "/team/reem-bamajboor.jpeg",
           "linkedin": "https://www.linkedin.com/in/reem-mohammed-b9abbb332/",
           "hasConsent": true
         },
@@ -452,7 +452,7 @@
           "nameEn": "Ayidh bin Salem",
           "roleAr": "عضو البروتوكول",
           "roleEn": "Member of protocols",
-          "image": "public/team/ayidh-bin-salem.jpeg",
+          "image": "/team/ayidh-bin-salem.jpeg",
           "linkedin": null,
           "hasConsent": true
         }
@@ -478,7 +478,7 @@
           "nameEn": "Reema Alsulaiman",
           "roleAr": "",
           "roleEn": "VP of Guest Experience",
-          "image": "public/team/reema-alsulaiman.jpeg",
+          "image": "/team/reema-alsulaiman.jpeg",
           "linkedin": null,
           "hasConsent": true
         },
@@ -568,7 +568,7 @@
           "nameEn": "Layan Alismail",
           "roleAr": "",
           "roleEn": "Logistics Officer",
-          "image": "public/team/layan-alismail.jpeg",
+          "image": "/team/layan-alismail.jpeg",
           "linkedin": null,
           "hasConsent": true
         },
@@ -598,7 +598,7 @@
           "nameEn": "Lujin Salamah",
           "roleAr": "",
           "roleEn": "External Area Officer",
-          "image": "public/team/lujin-salamah.jpeg",
+          "image": "/team/lujin-salamah.jpeg",
           "linkedin": null,
           "hasConsent": true
         },
@@ -608,7 +608,7 @@
           "nameEn": "Amzan Alghamdi",
           "roleAr": "",
           "roleEn": "Member of External Area",
-          "image": "public/team/amzan-alghamdi.jpeg",
+          "image": "/team/amzan-alghamdi.jpeg",
           "linkedin": null,
           "hasConsent": true
         },
@@ -618,7 +618,7 @@
           "nameEn": "Abdulaziz alenzi",
           "roleAr": "",
           "roleEn": "Stage Officer",
-          "image": "public/team/abdulaziz-alenzi.jpeg",
+          "image": "/team/abdulaziz-alenzi.jpeg",
           "linkedin": "https://www.linkedin.com/in/abdulaziz-alenzi-630a35312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -628,7 +628,7 @@
           "nameEn": "ABDULHADI ALHAMED",
           "roleAr": "",
           "roleEn": "Member of Stage",
-          "image": "public/team/abdulhadi-alhamed.jpeg",
+          "image": "/team/abdulhadi-alhamed.jpeg",
           "linkedin": "https://www.linkedin.com/in/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%87%D8%A7%D9%84%D9%87%D8%A7%D8%AF%D9%8A-%D8%A7%D9%84%D8%AD%D8%A7%D9%85%D8%AF-89a33228a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -638,7 +638,7 @@
           "nameEn": "Abdulrahman Almutawa",
           "roleAr": "",
           "roleEn": "Member of Stage",
-          "image": "public/team/abdulrahman-almutawa.jpeg",
+          "image": "/team/abdulrahman-almutawa.jpeg",
           "linkedin": null,
           "hasConsent": true
         },
@@ -648,7 +648,7 @@
           "nameEn": "Yara Bader",
           "roleAr": "",
           "roleEn": "Organizing Officer",
-          "image": "public/team/yara-bader.jpeg",
+          "image": "/team/yara-bader.jpeg",
           "linkedin": "https://www.linkedin.com/in/yara-al-wehaibi-18189b2ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
           "hasConsent": true
         },
@@ -658,7 +658,7 @@
           "nameEn": "Remaz Alamri",
           "roleAr": "",
           "roleEn": "Member of Organizing",
-          "image": "public/team/remaz-alamri.jpeg",
+          "image": "/team/remaz-alamri.jpeg",
           "linkedin": null,
           "hasConsent": true
         },
@@ -714,7 +714,7 @@
           "nameEn": "Shoq Alsemari",
           "roleAr": "عضو الموقع الإلكتروني",
           "roleEn": "Member of website",
-          "image": "public/team/shoq-alsemari.jpeg",
+          "image": "/team/shoq-alsemari.jpeg",
           "linkedin": "http://linkedin.com/in/shoqalsemari",
           "hasConsent": true
         },
@@ -744,7 +744,7 @@
           "nameEn": "Faisal Alkhrayef",
           "roleAr": "عضو الموقع الإلكتروني",
           "roleEn": "Member of website",
-          "image": "public/team/faisal-alkhrayef.jpeg",
+          "image": "/team/faisal-alkhrayef.jpeg",
           "linkedin": "https://www.linkedin.com/in/fkhrayef/",
           "hasConsent": true
         },
@@ -754,7 +754,7 @@
           "nameEn": "Abdulaziz Alkathiri",
           "roleAr": "عضو الموقع الإلكتروني",
           "roleEn": "Member of website",
-          "image": "public/team/abdulaziz-alkathiri.jpeg",
+          "image": "/team/abdulaziz-alkathiri.jpeg",
           "linkedin": "https://www.linkedin.com/in/abdulazizalkathiri/",
           "hasConsent": true
         },

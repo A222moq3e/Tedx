@@ -22,17 +22,21 @@ export default async function TeamPage({ params }: Props) {
           <h1 className="mb-4 text-5xl font-bold md:text-7xl">
             {locale === "ar" ? (
               <>
-                <span className="font-bold text-white">فريق </span>
+                <span className="font-bold text-gray-900 dark:text-white">
+                  فريق{" "}
+                </span>
                 <span className="text-primary font-bold">تيدكس</span>
               </>
             ) : (
               <>
-                <span className="font-bold text-white">TEDx </span>
-                <span className="text-primary font-bold">Team</span>
+                <span className="text-primary font-bold">TEDx </span>
+                <span className="font-bold text-gray-900 dark:text-white">
+                  Team
+                </span>
               </>
             )}
           </h1>
-          <h2 className="text-muted-foreground mb-6 text-3xl font-light md:text-4xl">
+          <h2 className="mb-6 text-3xl font-light text-gray-700 md:text-4xl dark:text-gray-300">
             {t("teamTitle")}
           </h2>
         </div>

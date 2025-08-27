@@ -23,7 +23,7 @@ export function TeamSection() {
         {teamData.departments.map((department) => (
           <div key={department.nameEn} className="space-y-8">
             {/* Department Header */}
-            <div className="text-center">
+            <div className="px-4 text-center">
               <button
                 onClick={() => {
                   setHasUserInteracted(true);
@@ -37,12 +37,12 @@ export function TeamSection() {
                 }}
                 className="group flex w-full cursor-pointer items-center justify-center transition-colors"
               >
-                <div className="text-center">
-                  <h3 className="group-hover:text-primary mb-2 text-2xl font-bold text-gray-800 transition-colors dark:text-gray-200">
+                <div className="mx-auto max-w-xs text-center">
+                  <h3 className="group-hover:text-primary dark:group-hover:text-primary mb-2 text-xl font-bold text-gray-800 transition-colors sm:text-2xl dark:text-white">
                     {locale === "ar" ? department.name : department.nameEn}
                   </h3>
                   <div
-                    className={`mx-auto h-1 w-24 rounded-full transition-all duration-300 ${
+                    className={`group-hover:bg-primary dark:group-hover:bg-primary mx-auto h-1 w-24 rounded-full transition-all duration-300 ${
                       expandedDepartments.has(department.nameEn)
                         ? "bg-primary"
                         : "bg-gray-400 dark:bg-gray-500"
@@ -58,7 +58,7 @@ export function TeamSection() {
                 {department.members.map((member) => (
                   <div
                     key={member.id}
-                    className={`group relative flex h-56 flex-col rounded-2xl border border-gray-200 bg-white/80 p-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl sm:h-72 sm:p-6 lg:h-80 dark:border-gray-700 dark:bg-gray-800/80 ${isArabic ? "text-right" : "text-left"}`}
+                    className={`group relative flex h-56 flex-col rounded-2xl border border-gray-200 bg-white/90 p-3 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl sm:h-72 sm:p-6 lg:h-80 dark:border-gray-700 dark:bg-gray-800/90 ${isArabic ? "text-right" : "text-left"}`}
                   >
                     {/* Member Image */}
                     <div className="mb-3 flex-shrink-0 sm:mb-6">
@@ -84,10 +84,10 @@ export function TeamSection() {
 
                     {/* Member Info - Takes remaining space */}
                     <div className="flex flex-1 flex-col text-center">
-                      <h3 className="mb-2 text-lg font-bold text-gray-900 sm:text-xl dark:text-white">
+                      <h3 className="mb-2 h-12 text-lg font-bold text-gray-900 sm:text-xl dark:text-white">
                         {locale === "ar" ? member.nameAr : member.nameEn}
                       </h3>
-                      <p className="mb-3 flex-1 text-sm text-gray-600 sm:mb-4 sm:text-base dark:text-gray-300">
+                      <p className="mb-3 h-16 flex-1 text-sm text-gray-600 sm:mb-4 sm:text-base dark:text-gray-300">
                         {locale === "ar" ? member.roleAr : member.roleEn}
                       </p>
 
@@ -98,7 +98,7 @@ export function TeamSection() {
                             asChild
                             size="default"
                             variant="outline"
-                            className="w-full min-w-[120px] border-gray-300 bg-white/50 text-gray-700 transition-all duration-200 hover:border-[#cf0200] hover:bg-[#cf0200] hover:text-white sm:min-w-[140px] dark:border-gray-600 dark:bg-gray-800/50 dark:text-gray-300 dark:hover:border-[#cf0200] dark:hover:bg-[#cf0200] dark:hover:text-white"
+                            className="w-full min-w-[120px] border-gray-300 bg-white/80 text-gray-700 transition-all duration-200 hover:border-[#cf0200] hover:bg-[#cf0200] hover:text-white sm:min-w-[140px] dark:border-gray-600 dark:bg-gray-800/80 dark:text-gray-300 dark:hover:border-[#cf0200] dark:hover:bg-[#cf0200] dark:hover:text-white"
                           >
                             <a
                               href={member.linkedin}
@@ -125,7 +125,7 @@ export function TeamSection() {
                             size="default"
                             variant="outline"
                             disabled
-                            className="w-full min-w-[120px] border-gray-200 bg-gray-100 text-gray-400 sm:min-w-[140px] dark:border-gray-600 dark:bg-gray-700 dark:text-gray-500"
+                            className="w-full min-w-[120px] border-gray-200 bg-gray-100 text-gray-400 sm:min-w-[140px] dark:border-gray-600 dark:bg-gray-700/50 dark:text-gray-500"
                           >
                             <svg
                               className="mr-2 h-4 w-4 sm:h-5 sm:w-5"
