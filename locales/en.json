@@ -188,5 +188,19 @@
       "slot8": "9:00 - 10:00 PM",
       "slot9": "10:00 - 10:15 PM"
     }
+  },
+  "AboutUs": {
+    "title": "Who We Are",
+    "visionTitle": "Vision",
+    "vision": "To be an inspiring platform that enables unique ideas to reach everyone, encouraging creative thinking and positive change in society.",
+    "missionTitle": "Mission",
+    "mission": "To provide a unique TEDx event experience, bringing together inspiring speakers and an enthusiastic audience to exchange ideas and build a more aware and creative community.",
+    "objectivesTitle": "Objectives",
+    "objectives": [
+      "To spread inspiring ideas and encourage creativity among attendees.",
+      "To enable participants to learn from the speakers' experiences and stories.",
+      "To build a network of relationships between attendees, speakers, and the local community.",
+      "To stimulate critical thinking and positive contribution to society."
+    ]
   }
 }
