@@ -1,8 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { type Locale } from "~/i18n/routing";
 import { useTranslations, useLocale } from "next-intl";
-import Image from "next/image";
-import DownloadIcsButton from "~/components/download-Ics-Button";
+import { AboutUs } from "~/components/AboutUs";
 
 import { HeroSection } from "~/components/HeroSection";
 import { FeaturesGrid } from "~/components/FeaturesGrid";
@@ -26,6 +25,9 @@ function HomeContent() {
       
       {/* Event Details */}
       <EventDetails />
+      
+      {/* About Us */}
+      <AboutUs />
       
       {/* Features Grid */}
       <div className={`grid grid-cols-1 gap-6 sm:grid-cols-3 md:gap-8 mt-20 ${isArabic ? 'rtl' : 'ltr'}`}>
