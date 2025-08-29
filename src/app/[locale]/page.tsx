@@ -16,19 +16,16 @@ function HomeContent() {
   "use client";
   const t = useTranslations("HomePage");
   const locale = useLocale();
-  const isArabic = locale === 'ar';
-  
+  const isArabic = locale === "ar";
+
   return (
     <>
       {/* Hero Section */}
       <HeroSection />
-      
+
       {/* Event Details */}
       <EventDetails />
-      
-      {/* About Us */}
-      <AboutUs />
-      
+
       {/* Features Grid */}
       <div className={`grid grid-cols-1 gap-6 sm:grid-cols-3 md:gap-8 mt-20 ${isArabic ? 'rtl' : 'ltr'}`}>
         <div className={`flex flex-col gap-4 rounded-xl bg-gray-100/80 dark:bg-white/10 p-6 hover:bg-gray-200/80 dark:hover:bg-white/20 transition-colors border border-gray-200 dark:border-white/20 ${isArabic ? 'text-right' : 'text-left'}`}>
@@ -59,8 +56,12 @@ function HomeContent() {
       <MapSection />
 
       {/* Call to Action */}
-      <div className={`text-center space-y-4 mt-12 ${isArabic ? 'rtl' : 'ltr'}`}>
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{t("readyTitle")}</h2>
+      <div
+        className={`mt-12 space-y-4 text-center ${isArabic ? "rtl" : "ltr"}`}
+      >
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+          {t("readyTitle")}
+        </h2>
         <p className="text-gray-600 dark:text-gray-300">
           {t("readyDescription")}
         </p>
@@ -73,11 +74,9 @@ export default async function Home({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   return (
-    <main
-      className="relative flex min-h-screen flex-col items-center justify-center tedx-animated-bg text-gray-900 dark:text-white overflow-hidden"
-    >
+    <main className="tedx-animated-bg relative flex min-h-screen flex-col items-center justify-center overflow-hidden text-gray-900 dark:text-white">
       {/* Overlay for text readability */}
-      <div className="absolute inset-0 bg-white/20 dark:bg-black/40 z-0"></div>
+      <div className="absolute inset-0 z-0 bg-white/20 dark:bg-black/40"></div>
 
       <div className="relative z-10 container flex flex-col items-center justify-center gap-12 px-4 py-16">
         <HomeContent />
